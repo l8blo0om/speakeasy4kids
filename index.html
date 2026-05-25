@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Speak Easy Kids | 8-Week Afterschool Spanish (K–5)</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Speak Easy Kids — Afterschool Spanish that Feels Like Recess"/>
+  <meta property="og:description" content="8 weeks. K–5. Play-based Spanish. Built by a PhD educator who has been teaching since 1996. Available as an afterschool pilot at your school."/>
+  <meta property="og:image" content="./logo.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="./logo.jpg"/>
+  <meta name="description" content="8 weeks of play-based Spanish for K–5 kids. Games, songs, crafts, culture. Available as an afterschool pilot at your school."/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Special+Elite&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --board:   #F0E6C8;
+      --cream:   #FAF4E1;
+      --dark:    #1A1A1A;
+      --red:     #CC2529;
+      --orange:  #E8734A;
+      --green:   #2D6B3C;
+      --blue:    #1B3A6B;
+      --yellow:  #F5C518;
+      --purple:  #5C2D91;
+      --teal:    #008B8B;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito', sans-serif; background: var(--board); color: var(--dark); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--dark);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; height: 64px;
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 4px solid var(--yellow);
+    }
+    .nav-logo-wrap { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo-img { width: 44px; height: 44px; border-radius: 5px; display: block; object-fit: cover; }
+    .nav-logo-text { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.15rem; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
+    .nav-logo-text span { color: var(--yellow); }
+    .nav-logo-text .small { font-size: 0.7rem; color: rgba(255,255,255,0.55); display: block; letter-spacing: 3px; }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--yellow); }
+    .nav-cta { background: var(--red); color: #fff !important; padding: 0.4rem 1.1rem; border: 2px solid rgba(255,255,255,0.3); }
+    .nav-cta:hover { background: #aa1e21 !important; }
+    .lang-switcher { display: flex; gap: 0.3rem; align-items: center; }
+    .lang-btn { background: transparent; border: 1.5px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.55); font-family: 'Oswald',sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px; padding: 0.22rem 0.5rem; cursor: pointer; border-radius: 3px; transition: all 0.15s; line-height: 1; }
+    .lang-btn:hover { border-color: var(--yellow); color: var(--yellow); }
+    .lang-btn.active { background: var(--yellow); color: var(--dark); border-color: var(--yellow); font-weight: 700; }
+
+    /* ── HERO ── */
+    .hero { position: relative; min-height: 86vh; display: flex; align-items: center; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80'); background-size: cover; background-position: center 40%; filter: brightness(0.4) saturate(0.85); }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 10px; background: repeating-linear-gradient(90deg, var(--red) 0 40px, var(--orange) 40px 80px, var(--yellow) 80px 120px, var(--green) 120px 160px, var(--blue) 160px 200px, var(--purple) 200px 240px); z-index: 3; }
+    .hero-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; text-align: center; padding: 3rem 2rem; color: #fff; }
+    .hero-eyebrow { font-family: 'Special Elite', cursive; font-size: clamp(0.7rem, 1.4vw, 0.9rem); color: var(--yellow); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .hero-title { font-family: 'Oswald', sans-serif; font-size: clamp(2.6rem, 7vw, 4.8rem); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; line-height: 1.02; margin-bottom: 0.8rem; }
+    .hero-title .yellow { color: var(--yellow); }
+    .hero-divider { width: 80px; height: 3px; background: var(--yellow); margin: 1.5rem auto; }
+    .hero-sub { font-family: 'Special Elite', cursive; font-size: clamp(0.85rem, 2vw, 1.05rem); color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 1.25rem; text-transform: uppercase; }
+    .hero-desc { font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 2.5rem; max-width: 540px; margin-left: auto; margin-right: auto; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.85rem 1.8rem; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; border: 3px solid transparent; }
+    .btn-red { background: var(--red); color: #fff; border-color: #fff; }
+    .btn-red:hover { background: #aa1e21; transform: translateY(-2px); }
+    .btn-yellow { background: var(--yellow); color: var(--dark); border-color: var(--dark); }
+    .btn-yellow:hover { background: #ddb014; transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: #fff; border-color: #fff; }
+    .btn-outline:hover { background: rgba(255,255,255,0.15); }
+
+    /* ── TICKER ── */
+    .ticker { background: var(--dark); color: var(--yellow); font-family: 'Oswald', sans-serif; font-size: 0.88rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.7rem 1rem; text-align: center; border-bottom: 3px solid var(--yellow); }
+    .ticker span { color: rgba(255,255,255,0.35); margin: 0 0.85rem; }
+
+    /* ── SECTIONS ── */
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-tag { font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #fff; background: var(--red); display: inline-block; padding: 0.22rem 0.8rem; margin-bottom: 0.75rem; }
+    h2 { font-family: 'Oswald', sans-serif; font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; line-height: 1.15; margin-bottom: 1rem; }
+    .subtitle { font-size: 1rem; color: #555; line-height: 1.75; max-width: 620px; }
+
+    /* ── ABOUT (founder forward) ── */
+    .about { background: var(--cream); border-top: 6px solid var(--dark); border-bottom: 6px solid var(--dark); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: center; }
+    .about-img { border: 5px solid var(--dark); box-shadow: 10px 10px 0 var(--dark); aspect-ratio: 4/5; overflow: hidden; max-width: 380px; }
+    .about-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .about-text p { font-size: 1rem; color: #444; line-height: 1.8; margin-bottom: 1rem; }
+    .pill-row { margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .pill { font-family: 'Oswald', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 0.3rem 0.85rem; border: 2px solid var(--dark); }
+    .pill.red { background: var(--red); color: #fff; border-color: var(--red); }
+    .pill.green { background: var(--green); color: #fff; border-color: var(--green); }
+    .pill.blue { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .pill.yellow { background: var(--yellow); color: var(--dark); border-color: var(--yellow); }
+
+    /* ── TEACHER CARD (TITLE DEED) ── */
+    .teacher-card { max-width: 760px; margin: 3rem auto 0; background: #FFFEF8; border: 3px solid var(--dark); box-shadow: 10px 10px 0 var(--dark); padding: 2rem 2.5rem; position: relative; }
+    .teacher-card::before { content: "TITLE DEED"; position: absolute; top: -0.7rem; left: 50%; transform: translateX(-50%); background: var(--red); color: #fff; font-family: 'Oswald',sans-serif; font-size: 0.7rem; letter-spacing: 4px; padding: 0.3rem 0.9rem; font-weight: 700; }
+    .teacher-card .tc-eyebrow { font-family: 'Oswald',sans-serif; font-size: 0.78rem; letter-spacing: 3px; color: var(--red); text-transform: uppercase; font-weight: 700; margin: 0.5rem 0 0.4rem; }
+    .teacher-card .tc-h { font-family: 'Oswald',sans-serif; font-size: 1.5rem; color: var(--dark); margin-bottom: 1.2rem; letter-spacing: 0.5px; line-height: 1.25; }
+    .teacher-card .tc-line { font-size: 0.95rem; color: #333; line-height: 1.5; padding: 0.5rem 0; border-bottom: 1px dashed rgba(0,0,0,0.15); margin: 0; }
+    .teacher-card .tc-line:last-of-type { border-bottom: none; }
+    .teacher-card .tc-line strong { font-family: 'Oswald',sans-serif; letter-spacing: 1.5px; font-weight: 700; color: var(--dark); margin-right: 0.5rem; display: inline-block; min-width: 4rem; }
+    .teacher-card .tc-since { font-family: 'Oswald',sans-serif; font-size: 0.85rem; letter-spacing: 3px; color: var(--red); margin-top: 1.25rem; text-transform: uppercase; font-weight: 700; text-align: center; padding-top: 1rem; border-top: 3px double var(--dark); }
+
+    /* ── HOW IT WORKS ── */
+    .how { background: var(--board); }
+    .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+    .how-card { background: #FFFEF8; border: 2px solid var(--dark); padding: 1.5rem 1.25rem; text-align: center; position: relative; }
+    .how-card .step { font-family: 'Oswald',sans-serif; font-size: 0.7rem; letter-spacing: 3px; color: var(--red); font-weight: 700; margin-bottom: 0.5rem; }
+    .how-card .icon { font-size: 2.6rem; margin-bottom: 0.5rem; }
+    .how-card h3 { font-family: 'Oswald',sans-serif; font-size: 1.05rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .how-card p { font-size: 0.9rem; line-height: 1.55; color: #444; }
+
+    /* ── CURRICULUM GRID ── */
+    .curriculum { background: var(--cream); border-top: 6px solid var(--dark); border-bottom: 6px solid var(--dark); }
+    .week-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2.5rem; }
+    .week { background: #FFFEF8; border: 2px solid var(--dark); display: flex; flex-direction: column; overflow: hidden; }
+    .week-head { background: var(--yellow); padding: 0.55rem 0.85rem; border-bottom: 2px solid var(--dark); display: flex; justify-content: space-between; align-items: center; }
+    .week-num { font-family: 'Oswald',sans-serif; font-weight: 700; font-size: 0.75rem; letter-spacing: 2px; color: var(--dark); }
+    .week-theme { font-family: 'Oswald',sans-serif; font-weight: 700; font-size: 0.95rem; letter-spacing: 1.5px; color: var(--dark); text-transform: uppercase; }
+    .week-body { padding: 1rem 1.1rem 1.25rem; flex: 1; }
+    .week-body .es { font-family: 'Oswald',sans-serif; font-size: 1.4rem; color: var(--red); font-weight: 700; letter-spacing: 2px; line-height: 1; margin-bottom: 0.4rem; }
+    .week-body .en { font-size: 0.78rem; color: #777; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .week-body .activity { font-size: 0.85rem; color: #333; line-height: 1.45; }
+    .week.finale .week-head { background: var(--red); }
+    .week.finale .week-num, .week.finale .week-theme { color: #fff; }
+
+    /* ── TWO AUDIENCES (schools vs parents) ── */
+    .audiences { background: var(--board); }
+    .audiences-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem; }
+    .audience-card { background: #FFFEF8; border: 3px solid var(--dark); box-shadow: 8px 8px 0 var(--dark); padding: 2.25rem 2rem; position: relative; }
+    .audience-card.schools { border-top: 12px solid var(--red); }
+    .audience-card.parents { border-top: 12px solid var(--green); }
+    .audience-card .a-eyebrow { font-family: 'Oswald',sans-serif; font-size: 0.72rem; letter-spacing: 4px; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .audience-card.schools .a-eyebrow { color: var(--red); }
+    .audience-card.parents .a-eyebrow { color: var(--green); }
+    .audience-card h3 { font-family: 'Oswald',sans-serif; font-size: 1.65rem; letter-spacing: 1px; line-height: 1.15; margin-bottom: 1rem; text-transform: uppercase; }
+    .audience-card ul { list-style: none; }
+    .audience-card li { padding: 0.5rem 0 0.5rem 1.6rem; position: relative; font-size: 0.95rem; line-height: 1.55; color: #333; border-bottom: 1px dashed rgba(0,0,0,0.1); }
+    .audience-card li::before { content: "■"; position: absolute; left: 0; top: 0.5rem; color: var(--yellow); font-size: 0.8rem; }
+    .audience-card li:last-child { border-bottom: none; }
+    .audience-card .a-cta { margin-top: 1.5rem; }
+
+    /* ── PRICING ── */
+    .pricing { background: var(--cream); }
+    .price-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2.25rem; }
+    .price-card { background: var(--dark); color: #fff; padding: 2rem 1.5rem; text-align: center; }
+    .price-card .label { font-family: 'Oswald',sans-serif; font-size: 0.72rem; letter-spacing: 3px; color: var(--yellow); margin-bottom: 0.75rem; text-transform: uppercase; }
+    .price-card .amount { font-family: 'Oswald',sans-serif; font-size: 2.6rem; font-weight: 700; color: var(--yellow); line-height: 1; margin-bottom: 0.4rem; }
+    .price-card .per { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 1rem; letter-spacing: 1px; text-transform: uppercase; }
+    .price-card .detail { font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.8); }
+    .price-card.pilot { background: var(--red); }
+    .price-card.pilot .label, .price-card.pilot .amount { color: var(--yellow); }
+    .price-note { text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: #555; font-style: italic; }
+
+    /* ── FAQ ── */
+    .faq { background: var(--board); border-top: 6px solid var(--dark); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.25rem; margin-top: 2.5rem; }
+    .faq-q { font-family: 'Oswald',sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 1px; color: var(--dark); text-transform: uppercase; margin-bottom: 0.4rem; }
+    .faq-a { font-size: 0.95rem; color: #444; line-height: 1.7; }
+
+    /* ── CTA ── */
+    .final-cta { background: var(--dark); color: #fff; text-align: center; padding: 5rem 2rem; }
+    .final-cta h2 { color: var(--yellow); }
+    .final-cta p { max-width: 540px; margin: 1rem auto 2rem; color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.7; }
+    .final-cta .btn-yellow { color: var(--dark); }
+
+    /* ── FOOTER ── */
+    footer { background: #000; color: rgba(255,255,255,0.5); padding: 2.5rem 2rem; text-align: center; font-size: 0.85rem; line-height: 1.7; }
+    footer a { color: var(--yellow); text-decoration: none; }
+    footer .footer-row { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 0.8rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 1.25rem; height: 56px; }
+      .nav-links { display: none; }
+      .about-grid, .audiences-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .how-grid, .week-grid { grid-template-columns: repeat(2, 1fr); }
+      .price-row { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .about-img { max-width: 100%; margin: 0 auto; }
+    }
+    @media (max-width: 480px) {
+      .how-grid, .week-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo-wrap">
+    <img src="logo.jpg" alt="Speak Easy Kids" class="nav-logo-img"/>
+    <div class="nav-logo-text">Speak <span>Easy</span><span class="small">Kids · K–5</span></div>
+  </a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">🇺🇸 EN</button>
+      <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">🇪🇸 ES</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#how" data-i18n="nav_how">How It Works</a></li>
+      <li><a href="#curriculum" data-i18n="nav_curriculum">Curriculum</a></li>
+      <li><a href="#schools" data-i18n="nav_schools">Schools</a></li>
+      <li><a href="#parents" data-i18n="nav_parents">Parents</a></li>
+      <li><a href="pitch.pdf" target="_blank" rel="noopener" data-i18n="nav_pitch">Pitch</a></li>
+      <li><a href="#enroll" class="nav-cta" data-i18n="nav_enroll">Enroll</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow" data-i18n="hero_eyebrow">Afterschool · 8 Weeks · K–5</div>
+    <h1 class="hero-title"><span data-i18n="hero_title_1">Spanish</span><br/><span class="yellow" data-i18n="hero_title_2">that feels like</span><br/><span data-i18n="hero_title_3">recess.</span></h1>
+    <div class="hero-divider"></div>
+    <div class="hero-sub" data-i18n="hero_sub">Play-based · Culture-rich · Built by a PhD educator</div>
+    <p class="hero-desc" data-i18n="hero_desc">An 8-week Spanish afterschool program for K–5. Games, songs, food, festivals, stories — and a finale showcase where families get to see what their kids can actually say. Not another worksheet.</p>
+    <div class="hero-btns">
+      <a href="#schools" class="btn btn-red" data-i18n="hero_btn_schools">For Schools — Pilot Us</a>
+      <a href="#parents" class="btn btn-outline" data-i18n="hero_btn_parents">For Parents — Enroll</a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" data-i18n="ticker">8 Weeks <span>•</span> K–5 Mixed <span>•</span> Once a Week · 60 Min <span>•</span> Play-Based Spanish <span>•</span> Culture Each Week <span>•</span> Finale Showcase <span>•</span> Pilot Pricing for First School</div>
+
+<!-- ABOUT (founder forward) -->
+<section class="about" id="about">
+  <div class="section-inner about-grid">
+    <div class="about-img">
+      <img src="founder.jpg" alt="Dr. Nicole Bishop — founder & lead teacher" loading="lazy"/>
+    </div>
+    <div class="about-text">
+      <div class="section-tag" data-i18n="about_tag">Who Built This</div>
+      <h2 data-i18n="about_h2">Designed by a teacher.<br/>Not a tech bro.</h2>
+      <p data-i18n="about_p1">Speak Easy Kids was built by Dr. Nicole Bishop — a PhD educator who has been teaching since 1996 and has spent her career figuring out how to make language stick. The program is modeled on the kind of afterschool culture clubs that already work — but redesigned around play, music, food, and games kids actually want to come back to.</p>
+      <p data-i18n="about_p2">No screens. No worksheets. No "repeat after me." Just an 8-week arc that runs like a story: kids meet, learn the words, use the words, and perform what they've learned for their families at the end.</p>
+      <div class="pill-row">
+        <span class="pill red" data-i18n="pill_8wk">8-Week Session</span>
+        <span class="pill green" data-i18n="pill_k5">K–5 Mixed</span>
+        <span class="pill blue" data-i18n="pill_60min">60 Min/Week</span>
+        <span class="pill yellow" data-i18n="pill_finale">Finale Showcase</span>
+      </div>
+    </div>
+  </div>
+  <div class="section-inner">
+    <div class="teacher-card">
+      <p class="tc-eyebrow" data-i18n="tc_eyebrow">Meet your teacher</p>
+      <h3 class="tc-h" data-i18n="tc_h">Three decades teaching language.<br/>Now applied to your kid.</h3>
+      <p class="tc-line" data-i18n="tc_l1"><strong>PhD</strong>Comparative Literature — University of Michigan</p>
+      <p class="tc-line" data-i18n="tc_l2"><strong>MA</strong>Comparative Literature, with Graduate Certificate in Women's Studies</p>
+      <p class="tc-line" data-i18n="tc_l3"><strong>BA</strong>English &amp; French — Amherst College</p>
+      <p class="tc-since" data-i18n="tc_since">Educator since 1996</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-inner">
+    <div class="section-tag" data-i18n="how_tag">How It Works</div>
+    <h2 data-i18n="how_h2">What a session looks like.</h2>
+    <p class="subtitle" data-i18n="how_subtitle">Sixty minutes, once a week, after the bell rings. Every week follows the same rhythm so kids know what to expect — but the games and themes change.</p>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="step" data-i18n="how1_step">Minutes 0–10</div>
+        <div class="icon">👋</div>
+        <h3 data-i18n="how1_h">Greeting Circle</h3>
+        <p data-i18n="how1_p">Hola. Cómo estás. Quick warm-up song. Kids check in in Spanish — even the new ones can do this by week 2.</p>
+      </div>
+      <div class="how-card">
+        <div class="step" data-i18n="how2_step">Minutes 10–30</div>
+        <div class="icon">🎲</div>
+        <h3 data-i18n="how2_h">Theme + Game</h3>
+        <p data-i18n="how2_p">This week's words and culture, taught through a game. Pictionary, charades, BINGO, scavenger hunts — never a worksheet.</p>
+      </div>
+      <div class="how-card">
+        <div class="step" data-i18n="how3_step">Minutes 30–50</div>
+        <div class="icon">🎨</div>
+        <h3 data-i18n="how3_h">Make Something</h3>
+        <p data-i18n="how3_p">Craft, song, recipe card, mini-skit. Kids leave with something physical to bring home — and a story to tell about it.</p>
+      </div>
+      <div class="how-card">
+        <div class="step" data-i18n="how4_step">Minutes 50–60</div>
+        <div class="icon">⭐</div>
+        <h3 data-i18n="how4_h">Showcase &amp; Send-Off</h3>
+        <p data-i18n="how4_p">Share what we made. Stamp the "passport." Earn Speak Easy Dollars for using Spanish during class. Lined up for next week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="curriculum" id="curriculum">
+  <div class="section-inner">
+    <div class="section-tag" data-i18n="curr_tag">8-Week Curriculum</div>
+    <h2 data-i18n="curr_h2">Eight themes.<br/>Eight reasons to come back.</h2>
+    <p class="subtitle" data-i18n="curr_subtitle">Each week builds on the last. By week 8, kids aren't reciting — they're <em>performing</em> what they learned for their families.</p>
+    <div class="week-grid">
+      <div class="week">
+        <div class="week-head"><span class="week-num" data-i18n="wk1_num">Week 1</span><span class="week-theme" data-i18n="wk1_theme">Hola</span></div>
+        <div class="week-body"><div class="es" data-i18n="wk1_es">¡Hola!</div><div class="en" data-i18n="wk1_en">Greetings · Names · Numbers 1–10</div><div class="activity" data-i18n="wk1_act">Name-tag craft, intro song, "find someone who…" mixer game.</div></div>
+      </div>
+      <div class="week">
+        <div class="week-head"><span class="week-num" data-i18n="wk2_num">Week 2</span><span class="week-theme" data-i18n="wk2_theme">Familia</span></div>
+        <div class="week-body"><div class="es" data-i18n="wk2_es">Mi familia</div><div class="en" data-i18n="wk2_en">Family · Pets · House Vocab</div><div class="activity" data-i18n="wk2_act">Family-tree drawing in Spanish, "guess who" game with family flashcards.</div></div>
+      </div>
+      <div class="week">
+        <div class="week-head"><span class="week-num" data-i18n="wk3_num">Week 3</span><span class="week-theme" data-i18n="wk3_theme">Comida</span></div>
+        <div class="week-body"><div class="es" data-i18n="wk3_es">¡A comer!</div><div class="en" data-i18n="wk3_en">Food · Meals · "Me gusta…"</div><div class="activity" data-i18n="wk3_act">Tasting circle with simple snacks. Order-at-the-restaurant role play.</div></div>
+      </div>
+      <div class="week">
+        <div class="week-head"><span class="week-num" data-i18n="wk4_num">Week 4</span><span class="week-theme" data-i18n="wk4_theme">Mercado</span></div>
+        <div class="week-body"><div class="es" data-i18n="wk4_es">El mercado</div><div class="en" data-i18n="wk4_en">Market · Money · Bargaining</div><div class="activity" data-i18n="wk4_act">Class market with Speak Easy Dollars. Kids buy/sell in Spanish.</div></div>
+      </div>
+      <div class="week">
+        <div class="week-head"><span class="week-num" data-i18n="wk5_num">Week 5</span><span class="week-theme" data-i18n="wk5_theme">Fiesta</span></div>
+        <div class="week-body"><div class="es" data-i18n="wk5_es">¡Fiesta!</div><div class="en" data-i18n="wk5_en">Holidays · Music · Dancing</div><div class="activity" data-i18n="wk5_act">Learn a holiday song and one folk dance from a Spanish-speaking country.</div></div>
+      </div>
+      <div class="week">
+        <div class="week-head"><span class="week-num" data-i18n="wk6_num">Week 6</span><span class="week-theme" data-i18n="wk6_theme">Cuentos</span></div>
+        <div class="week-body"><div class="es" data-i18n="wk6_es">Había una vez</div><div class="en" data-i18n="wk6_en">Stories · Folktales · Acting</div><div class="activity" data-i18n="wk6_act">Read a short folktale, then act it out in small groups with simple Spanish.</div></div>
+      </div>
+      <div class="week">
+        <div class="week-head"><span class="week-num" data-i18n="wk7_num">Week 7</span><span class="week-theme" data-i18n="wk7_theme">Juegos</span></div>
+        <div class="week-body"><div class="es" data-i18n="wk7_es">¡Vamos a jugar!</div><div class="en" data-i18n="wk7_en">Sports · Games · Verbs of Motion</div><div class="activity" data-i18n="wk7_act">Outdoor relay using Spanish commands. Pictionary tournament.</div></div>
+      </div>
+      <div class="week finale">
+        <div class="week-head"><span class="week-num" data-i18n="wk8_num">Week 8</span><span class="week-theme" data-i18n="wk8_theme">Finale</span></div>
+        <div class="week-body"><div class="es" data-i18n="wk8_es">El Showcase</div><div class="en" data-i18n="wk8_en">Family Performance · Passport Stamp</div><div class="activity" data-i18n="wk8_act">Families invited. Kids perform what they learned. Everyone takes home a passport stamped 8 times.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO AUDIENCES -->
+<section class="audiences" id="audiences">
+  <div class="section-inner">
+    <div class="section-tag" data-i18n="aud_tag">Two Audiences. One Program.</div>
+    <h2 data-i18n="aud_h2">Pick your card.</h2>
+    <p class="subtitle" data-i18n="aud_subtitle">Speak Easy Kids works as either a turnkey afterschool program a school hosts — or as direct enrollment for individual families. Both run the same 8-week arc.</p>
+
+    <div class="audiences-grid">
+      <!-- SCHOOLS -->
+      <div class="audience-card schools" id="schools">
+        <div class="a-eyebrow" data-i18n="schools_eyebrow">For Schools · PTAs</div>
+        <h3 data-i18n="schools_h">Pilot us this semester.</h3>
+        <ul>
+          <li data-i18n="schools_l1">Turnkey program: instructor, materials, games, supplies — we bring everything.</li>
+          <li data-i18n="schools_l2">Runs 8 consecutive weeks, once weekly, 60 minutes per session.</li>
+          <li data-i18n="schools_l3">K–5 mixed-grade — younger kids learn from older, older kids teach back.</li>
+          <li data-i18n="schools_l4">Bilingual enrichment with measurable progress; finale event for families.</li>
+          <li data-i18n="schools_l5">Pilot pricing for the first school in a district.</li>
+        </ul>
+        <div class="a-cta">
+          <!-- TODO: replace CALENDLY-LINK-HERE with your real Calendly URL -->
+          <a href="https://calendly.com/CALENDLY-LINK-HERE" target="_blank" rel="noopener" class="btn btn-red" data-i18n="schools_cta">Book a Pilot Call</a>
+        </div>
+      </div>
+
+      <!-- PARENTS -->
+      <div class="audience-card parents" id="parents">
+        <div class="a-eyebrow" data-i18n="parents_eyebrow">For Parents</div>
+        <h3 data-i18n="parents_h">Enroll your kid for the next session.</h3>
+        <ul>
+          <li data-i18n="parents_l1">Spanish that doesn't feel like school — kids actually want to come back.</li>
+          <li data-i18n="parents_l2">Once a week, 60 minutes, 8 consecutive weeks. Local pickup.</li>
+          <li data-i18n="parents_l3">Mixed grades K–5; younger and older kids practice together.</li>
+          <li data-i18n="parents_l4">You'll see what they learned — Week 8 is a family showcase.</li>
+          <li data-i18n="parents_l5">Sibling discount for the second child.</li>
+        </ul>
+        <div class="a-cta">
+          <!-- TODO: replace CALENDLY-LINK-HERE with your real Calendly URL -->
+          <a href="https://calendly.com/CALENDLY-LINK-HERE" target="_blank" rel="noopener" class="btn btn-yellow" data-i18n="parents_cta">Book a Tour</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-inner">
+    <div class="section-tag" data-i18n="price_tag">Pricing</div>
+    <h2 data-i18n="price_h2">Straightforward.<br/>No hidden materials fees.</h2>
+    <div class="price-row">
+      <div class="price-card pilot">
+        <div class="label" data-i18n="price_pilot_label">Schools · Pilot Rate</div>
+        <div class="amount" data-i18n="price_pilot_amount">Contact</div>
+        <div class="per" data-i18n="price_pilot_per">First school in district</div>
+        <div class="detail" data-i18n="price_pilot_detail">Custom pricing per school size and session count. We supply instructor, materials, and finale supplies.</div>
+      </div>
+      <div class="price-card">
+        <div class="label" data-i18n="price_one_label">Parents · One Child</div>
+        <div class="amount" data-i18n="price_one_amount">$199</div>
+        <div class="per" data-i18n="price_one_per">Full 8-week session</div>
+        <div class="detail" data-i18n="price_one_detail">All 8 classes, all materials, all snacks, finale showcase. One flat rate.</div>
+      </div>
+      <div class="price-card">
+        <div class="label" data-i18n="price_sib_label">Parents · Sibling</div>
+        <div class="amount" data-i18n="price_sib_amount">$149</div>
+        <div class="per" data-i18n="price_sib_per">Second child, same family</div>
+        <div class="detail" data-i18n="price_sib_detail">Bring a sister or brother and save $50. Different grade is fine — class is K–5 mixed.</div>
+      </div>
+    </div>
+    <p class="price-note" data-i18n="price_note">Need-based scholarships available. No child has ever been turned away for inability to pay.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <div class="section-tag" data-i18n="faq_tag">FAQ</div>
+    <h2 data-i18n="faq_h2">The questions parents and principals actually ask.</h2>
+    <div class="faq-grid">
+      <div>
+        <div class="faq-q" data-i18n="faq1_q">Does my kid need to know any Spanish?</div>
+        <div class="faq-a" data-i18n="faq1_a">No. The whole program assumes zero Spanish on day one. By week 2, every kid can introduce themselves in Spanish.</div>
+      </div>
+      <div>
+        <div class="faq-q" data-i18n="faq2_q">Is this a real curriculum or just play?</div>
+        <div class="faq-a" data-i18n="faq2_a">Both — and that's the point. Eight written lesson plans, real vocabulary goals each week, measurable showcase outcomes. Built by a PhD educator with 30 years of classroom experience.</div>
+      </div>
+      <div>
+        <div class="faq-q" data-i18n="faq3_q">What does a school need to provide?</div>
+        <div class="faq-a" data-i18n="faq3_a">A classroom or gym, one afternoon a week, and a sign-up form. We bring the instructor, materials, games, snacks, and the finale supplies.</div>
+      </div>
+      <div>
+        <div class="faq-q" data-i18n="faq4_q">How many kids per session?</div>
+        <div class="faq-a" data-i18n="faq4_a">Sweet spot is 12–20. We can run two simultaneous groups if a school has more interest.</div>
+      </div>
+      <div>
+        <div class="faq-q" data-i18n="faq5_q">Can homeschool families enroll?</div>
+        <div class="faq-a" data-i18n="faq5_a">Yes. We run a parallel community session for homeschool families when there's enough demand. Email us with your zip code.</div>
+      </div>
+      <div>
+        <div class="faq-q" data-i18n="faq6_q">What if my kid misses a week?</div>
+        <div class="faq-a" data-i18n="faq6_a">Each lesson stands alone, but the showcase builds on what came before. We send a one-page recap so missed kids don't fall behind.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="enroll">
+  <h2 data-i18n="cta_h2">Ready to Start?</h2>
+  <p data-i18n="cta_p">Whether you're a parent looking for an afterschool that actually sticks, or a principal looking for an 8-week pilot that runs itself — let's talk.</p>
+  <div class="hero-btns">
+    <!-- TODO: replace CALENDLY-LINK-HERE with your real Calendly URL -->
+    <a href="https://calendly.com/CALENDLY-LINK-HERE" target="_blank" rel="noopener" class="btn btn-yellow" data-i18n="cta_btn_book">Book a Call</a>
+    <a href="mailto:speak.easy.columbia@gmail.com?subject=Speak Easy Kids" class="btn btn-outline" data-i18n="cta_btn_email">Email Us</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="font-family:'Oswald',sans-serif;color:#fff;letter-spacing:2px;font-size:1rem;text-transform:uppercase;margin-bottom:0.4rem;">Speak Easy <span style="color:var(--yellow)">Kids</span></div>
+  <div data-i18n="footer_tag">An 8-week play-based Spanish afterschool program for K–5.</div>
+  <div class="footer-row">
+    <a href="mailto:speak.easy.columbia@gmail.com">speak.easy.columbia@gmail.com</a>
+    <a href="tel:8038816626">803.881.6626</a>
+    <a href="pitch.pdf" target="_blank">Pitch Deck</a>
+  </div>
+  <div style="margin-top:1.25rem;font-size:0.78rem;color:rgba(255,255,255,0.35);">© Speak Easy Kids · Built by Dr. Nicole Bishop</div>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      nav_about: "About", nav_how: "How It Works", nav_curriculum: "Curriculum", nav_schools: "Schools", nav_parents: "Parents", nav_pitch: "Pitch", nav_enroll: "Enroll",
+      hero_eyebrow: "Afterschool · 8 Weeks · K–5",
+      hero_title_1: "Spanish", hero_title_2: "that feels like", hero_title_3: "recess.",
+      hero_sub: "Play-based · Culture-rich · Built by a PhD educator",
+      hero_desc: "An 8-week Spanish afterschool program for K–5. Games, songs, food, festivals, stories — and a finale showcase where families get to see what their kids can actually say. Not another worksheet.",
+      hero_btn_schools: "For Schools — Pilot Us",
+      hero_btn_parents: "For Parents — Enroll",
+      ticker: "8 Weeks • K–5 Mixed • Once a Week · 60 Min • Play-Based Spanish • Culture Each Week • Finale Showcase • Pilot Pricing for First School",
+      about_tag: "Who Built This",
+      about_h2: "Designed by a teacher.<br/>Not a tech bro.",
+      about_p1: "Speak Easy Kids was built by Dr. Nicole Bishop — a PhD educator who has been teaching since 1996 and has spent her career figuring out how to make language stick. The program is modeled on the kind of afterschool culture clubs that already work — but redesigned around play, music, food, and games kids actually want to come back to.",
+      about_p2: "No screens. No worksheets. No \"repeat after me.\" Just an 8-week arc that runs like a story: kids meet, learn the words, use the words, and perform what they've learned for their families at the end.",
+      pill_8wk: "8-Week Session", pill_k5: "K–5 Mixed", pill_60min: "60 Min/Week", pill_finale: "Finale Showcase",
+      tc_eyebrow: "Meet your teacher",
+      tc_h: "Three decades teaching language.<br/>Now applied to your kid.",
+      tc_l1: "<strong>PhD</strong>Comparative Literature — University of Michigan",
+      tc_l2: "<strong>MA</strong>Comparative Literature, with Graduate Certificate in Women's Studies",
+      tc_l3: "<strong>BA</strong>English &amp; French — Amherst College",
+      tc_since: "Educator since 1996",
+      how_tag: "How It Works", how_h2: "What a session looks like.",
+      how_subtitle: "Sixty minutes, once a week, after the bell rings. Every week follows the same rhythm so kids know what to expect — but the games and themes change.",
+      how1_step: "Minutes 0–10", how1_h: "Greeting Circle", how1_p: "Hola. Cómo estás. Quick warm-up song. Kids check in in Spanish — even the new ones can do this by week 2.",
+      how2_step: "Minutes 10–30", how2_h: "Theme + Game", how2_p: "This week's words and culture, taught through a game. Pictionary, charades, BINGO, scavenger hunts — never a worksheet.",
+      how3_step: "Minutes 30–50", how3_h: "Make Something", how3_p: "Craft, song, recipe card, mini-skit. Kids leave with something physical to bring home — and a story to tell about it.",
+      how4_step: "Minutes 50–60", how4_h: "Showcase &amp; Send-Off", how4_p: "Share what we made. Stamp the \"passport.\" Earn Speak Easy Dollars for using Spanish during class. Lined up for next week.",
+      curr_tag: "8-Week Curriculum",
+      curr_h2: "Eight themes.<br/>Eight reasons to come back.",
+      curr_subtitle: "Each week builds on the last. By week 8, kids aren't reciting — they're <em>performing</em> what they learned for their families.",
+      wk1_num: "Week 1", wk1_theme: "Hola", wk1_es: "¡Hola!", wk1_en: "Greetings · Names · Numbers 1–10", wk1_act: "Name-tag craft, intro song, \"find someone who…\" mixer game.",
+      wk2_num: "Week 2", wk2_theme: "Familia", wk2_es: "Mi familia", wk2_en: "Family · Pets · House Vocab", wk2_act: "Family-tree drawing in Spanish, \"guess who\" game with family flashcards.",
+      wk3_num: "Week 3", wk3_theme: "Comida", wk3_es: "¡A comer!", wk3_en: "Food · Meals · \"Me gusta…\"", wk3_act: "Tasting circle with simple snacks. Order-at-the-restaurant role play.",
+      wk4_num: "Week 4", wk4_theme: "Mercado", wk4_es: "El mercado", wk4_en: "Market · Money · Bargaining", wk4_act: "Class market with Speak Easy Dollars. Kids buy/sell in Spanish.",
+      wk5_num: "Week 5", wk5_theme: "Fiesta", wk5_es: "¡Fiesta!", wk5_en: "Holidays · Music · Dancing", wk5_act: "Learn a holiday song and one folk dance from a Spanish-speaking country.",
+      wk6_num: "Week 6", wk6_theme: "Cuentos", wk6_es: "Había una vez", wk6_en: "Stories · Folktales · Acting", wk6_act: "Read a short folktale, then act it out in small groups with simple Spanish.",
+      wk7_num: "Week 7", wk7_theme: "Juegos", wk7_es: "¡Vamos a jugar!", wk7_en: "Sports · Games · Verbs of Motion", wk7_act: "Outdoor relay using Spanish commands. Pictionary tournament.",
+      wk8_num: "Week 8", wk8_theme: "Finale", wk8_es: "El Showcase", wk8_en: "Family Performance · Passport Stamp", wk8_act: "Families invited. Kids perform what they learned. Everyone takes home a passport stamped 8 times.",
+      aud_tag: "Two Audiences. One Program.", aud_h2: "Pick your card.",
+      aud_subtitle: "Speak Easy Kids works as either a turnkey afterschool program a school hosts — or as direct enrollment for individual families. Both run the same 8-week arc.",
+      schools_eyebrow: "For Schools · PTAs", schools_h: "Pilot us this semester.",
+      schools_l1: "Turnkey program: instructor, materials, games, supplies — we bring everything.",
+      schools_l2: "Runs 8 consecutive weeks, once weekly, 60 minutes per session.",
+      schools_l3: "K–5 mixed-grade — younger kids learn from older, older kids teach back.",
+      schools_l4: "Bilingual enrichment with measurable progress; finale event for families.",
+      schools_l5: "Pilot pricing for the first school in a district.",
+      schools_cta: "Book a Pilot Call",
+      parents_eyebrow: "For Parents", parents_h: "Enroll your kid for the next session.",
+      parents_l1: "Spanish that doesn't feel like school — kids actually want to come back.",
+      parents_l2: "Once a week, 60 minutes, 8 consecutive weeks. Local pickup.",
+      parents_l3: "Mixed grades K–5; younger and older kids practice together.",
+      parents_l4: "You'll see what they learned — Week 8 is a family showcase.",
+      parents_l5: "Sibling discount for the second child.",
+      parents_cta: "Book a Tour",
+      price_tag: "Pricing", price_h2: "Straightforward.<br/>No hidden materials fees.",
+      price_pilot_label: "Schools · Pilot Rate", price_pilot_amount: "Contact", price_pilot_per: "First school in district",
+      price_pilot_detail: "Custom pricing per school size and session count. We supply instructor, materials, and finale supplies.",
+      price_one_label: "Parents · One Child", price_one_amount: "$199", price_one_per: "Full 8-week session",
+      price_one_detail: "All 8 classes, all materials, all snacks, finale showcase. One flat rate.",
+      price_sib_label: "Parents · Sibling", price_sib_amount: "$149", price_sib_per: "Second child, same family",
+      price_sib_detail: "Bring a sister or brother and save $50. Different grade is fine — class is K–5 mixed.",
+      price_note: "Need-based scholarships available. No child has ever been turned away for inability to pay.",
+      faq_tag: "FAQ", faq_h2: "The questions parents and principals actually ask.",
+      faq1_q: "Does my kid need to know any Spanish?", faq1_a: "No. The whole program assumes zero Spanish on day one. By week 2, every kid can introduce themselves in Spanish.",
+      faq2_q: "Is this a real curriculum or just play?", faq2_a: "Both — and that's the point. Eight written lesson plans, real vocabulary goals each week, measurable showcase outcomes. Built by a PhD educator with 30 years of classroom experience.",
+      faq3_q: "What does a school need to provide?", faq3_a: "A classroom or gym, one afternoon a week, and a sign-up form. We bring the instructor, materials, games, snacks, and the finale supplies.",
+      faq4_q: "How many kids per session?", faq4_a: "Sweet spot is 12–20. We can run two simultaneous groups if a school has more interest.",
+      faq5_q: "Can homeschool families enroll?", faq5_a: "Yes. We run a parallel community session for homeschool families when there's enough demand. Email us with your zip code.",
+      faq6_q: "What if my kid misses a week?", faq6_a: "Each lesson stands alone, but the showcase builds on what came before. We send a one-page recap so missed kids don't fall behind.",
+      cta_h2: "Ready to Start?",
+      cta_p: "Whether you're a parent looking for an afterschool that actually sticks, or a principal looking for an 8-week pilot that runs itself — let's talk.",
+      cta_btn_book: "Book a Call", cta_btn_email: "Email Us", cta_btn_call: "Call 803.881.6626",
+      footer_tag: "An 8-week play-based Spanish afterschool program for K–5."
+    },
+    es: {
+      nav_about: "Nosotros", nav_how: "Cómo Funciona", nav_curriculum: "Currículo", nav_schools: "Escuelas", nav_parents: "Padres", nav_pitch: "Propuesta", nav_enroll: "Inscríbete",
+      hero_eyebrow: "Después de Clases · 8 Semanas · K–5",
+      hero_title_1: "Español", hero_title_2: "que se siente como", hero_title_3: "recreo.",
+      hero_sub: "Basado en juego · Lleno de cultura · Creado por una educadora con PhD",
+      hero_desc: "Un programa de español después de clases de 8 semanas para K–5. Juegos, canciones, comida, fiestas, cuentos — y un showcase final donde las familias ven lo que sus hijos realmente pueden decir. No es otra hoja de trabajo.",
+      hero_btn_schools: "Para Escuelas — Programa Piloto",
+      hero_btn_parents: "Para Padres — Inscríbete",
+      ticker: "8 Semanas • K–5 Mixto • Una vez por semana · 60 Min • Español por Juego • Cultura Cada Semana • Showcase Final • Precio Piloto para Primera Escuela",
+      about_tag: "Quién lo Construyó",
+      about_h2: "Diseñado por una maestra.<br/>No por un programador.",
+      about_p1: "Speak Easy Kids fue creado por la Dra. Nicole Bishop — una educadora con PhD que ha estado enseñando desde 1996 y ha dedicado su carrera a descubrir cómo hacer que el idioma se quede. El programa está modelado en los clubes de cultura extraescolares que ya funcionan — pero rediseñado alrededor del juego, la música, la comida y los juegos a los que los niños sí quieren volver.",
+      about_p2: "Sin pantallas. Sin hojas de trabajo. Sin \"repite después de mí.\" Solo un arco de 8 semanas que se desarrolla como una historia: los niños se conocen, aprenden las palabras, las usan, y al final presentan lo aprendido a sus familias.",
+      pill_8wk: "Sesión de 8 Semanas", pill_k5: "K–5 Mixto", pill_60min: "60 Min/Semana", pill_finale: "Showcase Final",
+      tc_eyebrow: "Conoce a tu maestra",
+      tc_h: "Tres décadas enseñando idiomas.<br/>Ahora aplicadas a tu hijo.",
+      tc_l1: "<strong>Doctorado</strong>Literatura Comparada — Universidad de Michigan",
+      tc_l2: "<strong>Maestría</strong>Literatura Comparada, con Certificado en Estudios de la Mujer",
+      tc_l3: "<strong>Licenciatura</strong>Inglés y Francés — Amherst College",
+      tc_since: "Educadora desde 1996",
+      how_tag: "Cómo Funciona", how_h2: "Cómo se ve una sesión.",
+      how_subtitle: "Sesenta minutos, una vez por semana, después de clases. Cada semana sigue el mismo ritmo para que los niños sepan qué esperar — pero los juegos y temas cambian.",
+      how1_step: "Minutos 0–10", how1_h: "Círculo de Saludo", how1_p: "Hola. Cómo estás. Canción de calentamiento rápido. Los niños se reportan en español — hasta los nuevos pueden hacerlo para la semana 2.",
+      how2_step: "Minutos 10–30", how2_h: "Tema + Juego", how2_p: "Las palabras y la cultura de esta semana, enseñadas a través de un juego. Pictionary, charadas, BINGO, búsquedas — nunca una hoja de trabajo.",
+      how3_step: "Minutos 30–50", how3_h: "Hacer Algo", how3_p: "Manualidad, canción, tarjeta de receta, mini-obra. Los niños se van con algo físico para llevar a casa — y una historia que contar al respecto.",
+      how4_step: "Minutos 50–60", how4_h: "Muestra y Despedida", how4_p: "Compartir lo que hicimos. Sellar el \"pasaporte.\" Ganar Speak Easy Dólares por usar español en clase. Listos para la próxima semana.",
+      curr_tag: "Currículo de 8 Semanas",
+      curr_h2: "Ocho temas.<br/>Ocho razones para volver.",
+      curr_subtitle: "Cada semana se basa en la anterior. Para la semana 8, los niños no están recitando — están <em>presentando</em> lo que aprendieron ante sus familias.",
+      wk1_num: "Semana 1", wk1_theme: "Hola", wk1_es: "¡Hola!", wk1_en: "Saludos · Nombres · Números 1–10", wk1_act: "Manualidad de gafete, canción de intro, juego mezclador \"encuentra a alguien que…\".",
+      wk2_num: "Semana 2", wk2_theme: "Familia", wk2_es: "Mi familia", wk2_en: "Familia · Mascotas · Vocabulario de Casa", wk2_act: "Dibujo de árbol familiar en español, juego \"adivina quién\" con tarjetas de familia.",
+      wk3_num: "Semana 3", wk3_theme: "Comida", wk3_es: "¡A comer!", wk3_en: "Comida · Comidas · \"Me gusta…\"", wk3_act: "Círculo de degustación con bocadillos simples. Juego de rol de pedir en un restaurante.",
+      wk4_num: "Semana 4", wk4_theme: "Mercado", wk4_es: "El mercado", wk4_en: "Mercado · Dinero · Regateo", wk4_act: "Mercado de clase con Speak Easy Dólares. Los niños compran/venden en español.",
+      wk5_num: "Semana 5", wk5_theme: "Fiesta", wk5_es: "¡Fiesta!", wk5_en: "Fiestas · Música · Baile", wk5_act: "Aprender una canción de fiesta y un baile folclórico de un país hispanohablante.",
+      wk6_num: "Semana 6", wk6_theme: "Cuentos", wk6_es: "Había una vez", wk6_en: "Cuentos · Folclor · Actuación", wk6_act: "Leer un cuento corto, luego actuarlo en grupos pequeños con español sencillo.",
+      wk7_num: "Semana 7", wk7_theme: "Juegos", wk7_es: "¡Vamos a jugar!", wk7_en: "Deportes · Juegos · Verbos de Movimiento", wk7_act: "Relevo al aire libre usando comandos en español. Torneo de Pictionary.",
+      wk8_num: "Semana 8", wk8_theme: "Final", wk8_es: "El Showcase", wk8_en: "Presentación Familiar · Sello de Pasaporte", wk8_act: "Familias invitadas. Los niños presentan lo aprendido. Todos llevan a casa un pasaporte sellado 8 veces.",
+      aud_tag: "Dos Audiencias. Un Programa.", aud_h2: "Elige tu carta.",
+      aud_subtitle: "Speak Easy Kids funciona como un programa extraescolar llave en mano que una escuela aloja — o como inscripción directa para familias individuales. Ambos siguen el mismo arco de 8 semanas.",
+      schools_eyebrow: "Para Escuelas · PTAs", schools_h: "Pruébanos este semestre.",
+      schools_l1: "Programa llave en mano: instructora, materiales, juegos, suministros — traemos todo.",
+      schools_l2: "Funciona 8 semanas consecutivas, una vez por semana, 60 minutos por sesión.",
+      schools_l3: "K–5 mixto — los más pequeños aprenden de los mayores, los mayores enseñan.",
+      schools_l4: "Enriquecimiento bilingüe con progreso medible; evento final para las familias.",
+      schools_l5: "Precio piloto para la primera escuela en un distrito.",
+      schools_cta: "Agenda una Llamada Piloto",
+      parents_eyebrow: "Para Padres", parents_h: "Inscribe a tu hijo en la próxima sesión.",
+      parents_l1: "Español que no se siente como escuela — los niños realmente quieren volver.",
+      parents_l2: "Una vez por semana, 60 minutos, 8 semanas consecutivas. Recogida local.",
+      parents_l3: "Grados mixtos K–5; los niños más pequeños y mayores practican juntos.",
+      parents_l4: "Verás lo que aprendieron — la Semana 8 es un showcase familiar.",
+      parents_l5: "Descuento de hermano para el segundo hijo.",
+      parents_cta: "Agenda un Tour",
+      price_tag: "Precios", price_h2: "Directo.<br/>Sin tarifas ocultas de materiales.",
+      price_pilot_label: "Escuelas · Tarifa Piloto", price_pilot_amount: "Consultar", price_pilot_per: "Primera escuela en el distrito",
+      price_pilot_detail: "Precios personalizados según tamaño de escuela y cantidad de sesiones. Proveemos instructora, materiales y suministros del final.",
+      price_one_label: "Padres · Un Hijo", price_one_amount: "$199", price_one_per: "Sesión completa de 8 semanas",
+      price_one_detail: "Las 8 clases, todos los materiales, todos los bocadillos, showcase final. Una tarifa plana.",
+      price_sib_label: "Padres · Hermano", price_sib_amount: "$149", price_sib_per: "Segundo hijo, misma familia",
+      price_sib_detail: "Trae a un hermano o hermana y ahorra $50. Diferente grado está bien — la clase es K–5 mixta.",
+      price_note: "Hay becas según necesidad. Ningún niño ha sido rechazado por incapacidad de pagar.",
+      faq_tag: "FAQ", faq_h2: "Las preguntas que padres y directores realmente hacen.",
+      faq1_q: "¿Necesita mi hijo saber algo de español?", faq1_a: "No. Todo el programa asume cero español el primer día. Para la semana 2, cada niño puede presentarse en español.",
+      faq2_q: "¿Es un currículo real o solo juego?", faq2_a: "Ambos — y ese es el punto. Ocho planes de lección escritos, objetivos reales de vocabulario cada semana, resultados medibles en el showcase. Creado por una educadora con PhD y 30 años en el aula.",
+      faq3_q: "¿Qué necesita proveer la escuela?", faq3_a: "Un aula o gimnasio, una tarde a la semana, y un formulario de inscripción. Nosotros traemos la instructora, los materiales, los juegos, los bocadillos y los suministros del final.",
+      faq4_q: "¿Cuántos niños por sesión?", faq4_a: "El punto dulce es 12–20. Podemos correr dos grupos simultáneos si una escuela tiene más interés.",
+      faq5_q: "¿Pueden inscribirse familias de homeschool?", faq5_a: "Sí. Ofrecemos una sesión comunitaria paralela para familias homeschool cuando hay suficiente demanda. Escríbenos con tu código postal.",
+      faq6_q: "¿Qué pasa si mi hijo pierde una semana?", faq6_a: "Cada lección es independiente, pero el showcase se construye sobre lo anterior. Enviamos un resumen de una página para que los niños que faltaron no se atrasen.",
+      cta_h2: "¿Listos para Empezar?",
+      cta_p: "Ya seas un padre buscando un programa extraescolar que realmente funcione, o un director buscando un piloto de 8 semanas que se ejecute solo — hablemos.",
+      cta_btn_book: "Agenda una Llamada", cta_btn_email: "Escríbenos", cta_btn_call: "Llama 803.881.6626",
+      footer_tag: "Un programa de español extraescolar basado en juego de 8 semanas para K–5."
+    }
+  };
+
+  function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const value = translations[lang]?.[key];
+      if (value !== undefined) el.innerHTML = value;
+    });
+    document.querySelectorAll('.lang-btn').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+    try { localStorage.setItem('se-kids-lang', lang); } catch (_) {}
+  }
+  const saved = (() => { try { return localStorage.getItem('se-kids-lang'); } catch (_) { return null; } })();
+  setLanguage(saved || 'en');
+</script>
+
+</body>
+</html>
