@@ -15,6 +15,11 @@
   <meta name="description" content="8 weeks of play-based Spanish for K–5 kids. Games, songs, crafts, culture. Available as an afterschool pilot at your school."/>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Special+Elite&display=swap" rel="stylesheet"/>
   <style>
+    @property --hue { syntax: '<number>'; inherits: true; initial-value: 0; }
+    :root.hue-anim { --hue: 0; }
+    @keyframes huecycle { to { --hue: 360; } }
+    html { animation: huecycle 22s linear infinite; }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --board:   #F0E6C8;
@@ -62,7 +67,7 @@
     .hero-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; text-align: center; padding: 3rem 2rem; color: #fff; }
     .hero-eyebrow { font-family: 'Special Elite', cursive; font-size: clamp(0.7rem, 1.4vw, 0.9rem); color: var(--yellow); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1.25rem; }
     .hero-title { font-family: 'Oswald', sans-serif; font-size: clamp(2.6rem, 7vw, 4.8rem); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; line-height: 1.02; margin-bottom: 0.8rem; }
-    .hero-title .yellow { color: var(--yellow); }
+    .hero-title .yellow { color: hsl(var(--hue), 90%, 55%); }
     .hero-divider { width: 80px; height: 3px; background: var(--yellow); margin: 1.5rem auto; }
     .hero-sub { font-family: 'Special Elite', cursive; font-size: clamp(0.85rem, 2vw, 1.05rem); color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 1.25rem; text-transform: uppercase; }
     .hero-desc { font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 2.5rem; max-width: 540px; margin-left: auto; margin-right: auto; }
