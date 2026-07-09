@@ -17,7 +17,7 @@
   <style>
     @property --hue { syntax: '<number>'; inherits: true; initial-value: 0; }
     :root.hue-anim { --hue: 0; }
-    @keyframes huecycle { to { --hue: 360; } }
+    @keyframes huecycle { 0% { --hue: 35; } 50% { --hue: 55; } 100% { --hue: 35; } }
     html { animation: huecycle 22s linear infinite; }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -63,7 +63,7 @@
     /* ── HERO ── */
     .hero { position: relative; min-height: 86vh; display: flex; align-items: center; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80'); background-size: cover; background-position: center 40%; filter: brightness(0.4) saturate(0.85); }
-    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 10px; background: repeating-linear-gradient(90deg, var(--red) 0 40px, var(--orange) 40px 80px, var(--yellow) 80px 120px, var(--green) 120px 160px, var(--blue) 160px 200px, var(--purple) 200px 240px); z-index: 3; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 10px; background: repeating-linear-gradient(90deg, var(--red) 0 40px, var(--orange) 40px 80px, var(--yellow) 80px 120px); z-index: 3; }
     .hero-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; text-align: center; padding: 3rem 2rem; color: #fff; }
     .hero-eyebrow { font-family: 'Special Elite', cursive; font-size: clamp(0.7rem, 1.4vw, 0.9rem); color: var(--yellow); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1.25rem; }
     .hero-title { font-family: 'Oswald', sans-serif; font-size: clamp(2.6rem, 7vw, 4.8rem); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; line-height: 1.02; margin-bottom: 0.8rem; }
@@ -72,7 +72,7 @@
     .hero-sub { font-family: 'Special Elite', cursive; font-size: clamp(0.85rem, 2vw, 1.05rem); color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 1.25rem; text-transform: uppercase; }
     .hero-desc { font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 2.5rem; max-width: 540px; margin-left: auto; margin-right: auto; }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.85rem 1.8rem; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; border: 3px solid transparent; }
+    .btn { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 2.5px; text-transform: uppercase; padding: 1.15rem 2.3rem; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s, box-shadow 0.15s; border: 3px solid transparent; min-height: 3.4rem; line-height: 1; }
     .btn-red { background: var(--red); color: #fff; border-color: #fff; }
     .btn-red:hover { background: #aa1e21; transform: translateY(-2px); }
     .btn-yellow { background: var(--yellow); color: var(--dark); border-color: var(--dark); }
@@ -105,10 +105,10 @@
     .pill.yellow { background: var(--yellow); color: var(--dark); border-color: var(--yellow); }
 
     /* ── TEACHER CARD (TITLE DEED) ── */
-    .teacher-card { max-width: 760px; margin: 3rem auto 0; background: #FFFEF8; border: 3px solid var(--dark); box-shadow: 10px 10px 0 var(--dark); padding: 2rem 2.5rem; position: relative; }
+    .teacher-card { max-width: 860px; margin: 3rem auto 0; background: #FFFEF8; border: 4px solid var(--dark); box-shadow: 12px 12px 0 var(--dark); padding: 2.6rem 3rem; position: relative; }
     .teacher-card::before { content: "TITLE DEED"; position: absolute; top: -0.7rem; left: 50%; transform: translateX(-50%); background: var(--red); color: #fff; font-family: 'Oswald',sans-serif; font-size: 0.7rem; letter-spacing: 4px; padding: 0.3rem 0.9rem; font-weight: 700; }
     .teacher-card .tc-eyebrow { font-family: 'Oswald',sans-serif; font-size: 0.78rem; letter-spacing: 3px; color: var(--red); text-transform: uppercase; font-weight: 700; margin: 0.5rem 0 0.4rem; }
-    .teacher-card .tc-h { font-family: 'Oswald',sans-serif; font-size: 1.5rem; color: var(--dark); margin-bottom: 1.2rem; letter-spacing: 0.5px; line-height: 1.25; }
+    .teacher-card .tc-h { font-family: 'Oswald',sans-serif; font-size: 1.85rem; color: var(--dark); margin-bottom: 1.35rem; letter-spacing: 0.5px; line-height: 1.2; }
     .teacher-card .tc-line { font-size: 0.95rem; color: #333; line-height: 1.5; padding: 0.5rem 0; border-bottom: 1px dashed rgba(0,0,0,0.15); margin: 0; }
     .teacher-card .tc-line:last-of-type { border-bottom: none; }
     .teacher-card .tc-line strong { font-family: 'Oswald',sans-serif; letter-spacing: 1.5px; font-weight: 700; color: var(--dark); margin-right: 0.5rem; display: inline-block; min-width: 4rem; }
@@ -163,7 +163,10 @@
     .price-card .detail { font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.8); }
     .price-card.pilot { background: var(--red); }
     .price-card.pilot .label, .price-card.pilot .amount { color: var(--yellow); }
-    .price-note { text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: #555; font-style: italic; }
+    .price-note { text-align: center; margin-top: 2rem; font-size: 0.85rem; color: #555; font-style: italic; }
+    .scholarship-callout { max-width: 620px; margin: 2.25rem auto 0; background: var(--cream); border: 3px solid var(--dark); border-radius: 6px; padding: 1.35rem 1.6rem; text-align: center; box-shadow: 6px 6px 0 var(--yellow); }
+    .scholarship-callout .sc-eyebrow { font-family: 'Oswald',sans-serif; font-size: 0.72rem; letter-spacing: 3.5px; color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .scholarship-callout .sc-line { font-family: 'Oswald',sans-serif; font-size: 1.15rem; color: var(--dark); font-weight: 700; letter-spacing: 0.5px; line-height: 1.35; }
 
     /* ── FAQ ── */
     .faq { background: var(--board); border-top: 6px solid var(--dark); }
@@ -184,6 +187,9 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
+      body { line-height: 1.75; }
+      .hero-desc { line-height: 1.85; }
+      p { line-height: 1.75; }
       nav { padding: 0 1.25rem; height: 56px; }
       .nav-links { display: none; }
       .about-grid, .audiences-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -230,6 +236,18 @@
     }
     .welcome-card .enter-btn:hover { background: #FAF4E1; border-color: #FAF4E1; }
 
+  
+    /* Parent / School quick-jump split — right after hero */
+    .quick-split { background: var(--cream); padding: 3rem 2rem; border-bottom: 6px solid var(--dark); }
+    .qs-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .qs-card { background: #FFFEF8; border: 3px solid var(--dark); box-shadow: 8px 8px 0 var(--dark); padding: 2rem 1.75rem; text-align: center; text-decoration: none; color: inherit; transition: transform 0.15s, box-shadow 0.15s; display: block; }
+    .qs-card:hover { transform: translate(-3px,-3px); box-shadow: 11px 11px 0 var(--dark); }
+    .qs-eyebrow { font-family: 'Oswald',sans-serif; font-size: 0.72rem; letter-spacing: 3.5px; color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .qs-h { font-family: 'Oswald',sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--dark); letter-spacing: 1px; text-transform: uppercase; }
+    .qs-h .arrow { display: inline-block; margin-left: 0.4rem; transition: transform 0.2s; }
+    .qs-card:hover .arrow { transform: translateX(4px); }
+    @media (max-width: 700px) { .qs-inner { grid-template-columns: 1fr; } }
+
   </style>
 </head>
 <body>
@@ -265,11 +283,25 @@
     <h1 class="hero-title"><span data-i18n="hero_title_1">Spanish</span><br/><span class="yellow" data-i18n="hero_title_2">that feels like</span><br/><span data-i18n="hero_title_3">recess.</span></h1>
     <div class="hero-divider"></div>
     <div class="hero-sub" data-i18n="hero_sub">Play-based · Culture-rich · Built by a PhD educator</div>
-    <p class="hero-desc" data-i18n="hero_desc">An 8-week Spanish afterschool program for K–5. Games, songs, food, festivals, stories — and a finale showcase where families get to see what their kids can actually say. Not another worksheet.</p>
+    <p class="hero-desc" data-i18n="hero_desc">An 8-week arc for K–5 kids. Games, songs, cultural traditions, storytelling — no worksheets, ever. By week 2, kids introduce themselves in Spanish. By week 8, they perform what they learned for their families. Built by a PhD educator with 30 years in the classroom.</p>
     <div class="hero-btns">
       <a href="#schools" class="btn btn-red" data-i18n="hero_btn_schools">For Schools — Pilot Us</a>
       <a href="#parents" class="btn btn-outline" data-i18n="hero_btn_parents">For Parents — Enroll</a>
     </div>
+  </div>
+</section>
+
+<!-- QUICK SPLIT — Parent or School? -->
+<section class="quick-split">
+  <div class="qs-inner">
+    <a href="#parents" class="qs-card">
+      <div class="qs-eyebrow" data-i18n="qs_parent_eye">Enroll your child</div>
+      <div class="qs-h" data-i18n="qs_parent">I'm a Parent<span class="arrow">→</span></div>
+    </a>
+    <a href="#schools" class="qs-card">
+      <div class="qs-eyebrow" data-i18n="qs_school_eye">Bring us to your school</div>
+      <div class="qs-h" data-i18n="qs_school">I Represent a School<span class="arrow">→</span></div>
+    </a>
   </div>
 </section>
 
@@ -455,7 +487,11 @@
         <div class="detail" data-i18n="price_sib_detail">Bring a sister or brother and save $50. Different grade is fine — class is K–5 mixed.</div>
       </div>
     </div>
-    <p class="price-note" data-i18n="price_note">Need-based scholarships available. No child has ever been turned away for inability to pay.</p>
+    <div class="scholarship-callout">
+      <div class="sc-eyebrow">Our Promise</div>
+      <div class="sc-line" data-i18n="price_note">No child has ever been turned away for inability to pay.</div>
+      <p style="font-size:0.85rem;color:#666;font-style:italic;margin-top:0.6rem;" data-i18n="price_note_sub">Need-based scholarships available.</p>
+    </div>
   </div>
 </section>
 
@@ -523,9 +559,11 @@
       hero_eyebrow: "Afterschool · 8 Weeks · K–5",
       hero_title_1: "Spanish", hero_title_2: "that feels like", hero_title_3: "recess.",
       hero_sub: "Play-based · Culture-rich · Built by a PhD educator",
-      hero_desc: "An 8-week Spanish afterschool program for K–5. Games, songs, food, festivals, stories — and a finale showcase where families get to see what their kids can actually say. Not another worksheet.",
+      hero_desc: "An 8-week arc for K–5 kids. Games, songs, cultural traditions, storytelling — no worksheets, ever. By week 2, kids introduce themselves in Spanish. By week 8, they perform what they learned for their families. Built by a PhD educator with 30 years in the classroom.",
       hero_btn_schools: "For Schools — Pilot Us",
       hero_btn_parents: "For Parents — Enroll",
+      qs_parent_eye: "Enroll your child", qs_parent: "I\u0027m a Parent",
+      qs_school_eye: "Bring us to your school", qs_school: "I Represent a School",
       ticker: "8 Weeks • K–5 Mixed • Once a Week · 60 Min • Play-Based Spanish • Culture Each Week • Finale Showcase • Pilot Pricing for First School",
       about_tag: "Who Built This",
       about_h2: "Designed by a teacher.<br/>Not a tech bro.",
@@ -578,7 +616,8 @@
       price_one_detail: "All 8 classes, all materials, all snacks, finale showcase. One flat rate.",
       price_sib_label: "Parents · Sibling", price_sib_amount: "$149", price_sib_per: "Second child, same family",
       price_sib_detail: "Bring a sister or brother and save $50. Different grade is fine — class is K–5 mixed.",
-      price_note: "Need-based scholarships available. No child has ever been turned away for inability to pay.",
+      price_note: "No child has ever been turned away for inability to pay.",
+      price_note_sub: "Need-based scholarships available.",
       faq_tag: "FAQ", faq_h2: "The questions parents and principals actually ask.",
       faq1_q: "Does my kid need to know any Spanish?", faq1_a: "No. The whole program assumes zero Spanish on day one. By week 2, every kid can introduce themselves in Spanish.",
       faq2_q: "Is this a real curriculum or just play?", faq2_a: "Both — and that's the point. Eight written lesson plans, real vocabulary goals each week, measurable showcase outcomes. Built by a PhD educator with 30 years of classroom experience.",
@@ -599,6 +638,8 @@
       hero_desc: "Un programa de español después de clases de 8 semanas para K–5. Juegos, canciones, comida, fiestas, cuentos — y un showcase final donde las familias ven lo que sus hijos realmente pueden decir. No es otra hoja de trabajo.",
       hero_btn_schools: "Para Escuelas — Programa Piloto",
       hero_btn_parents: "Para Padres — Inscríbete",
+      qs_parent_eye: "Inscribe a tu hijo", qs_parent: "Soy Padre / Madre",
+      qs_school_eye: "Traer a tu escuela", qs_school: "Represento una Escuela",
       ticker: "8 Semanas • K–5 Mixto • Una vez por semana · 60 Min • Español por Juego • Cultura Cada Semana • Showcase Final • Precio Piloto para Primera Escuela",
       about_tag: "Quién lo Construyó",
       about_h2: "Diseñado por una maestra.<br/>No por un programador.",
@@ -651,7 +692,8 @@
       price_one_detail: "Las 8 clases, todos los materiales, todos los bocadillos, showcase final. Una tarifa plana.",
       price_sib_label: "Padres · Hermano", price_sib_amount: "$149", price_sib_per: "Segundo hijo, misma familia",
       price_sib_detail: "Trae a un hermano o hermana y ahorra $50. Diferente grado está bien — la clase es K–5 mixta.",
-      price_note: "Hay becas según necesidad. Ningún niño ha sido rechazado por incapacidad de pagar.",
+      price_note: "Ningún niño ha sido rechazado por incapacidad de pagar.",
+      price_note_sub: "Hay becas según necesidad.",
       faq_tag: "FAQ", faq_h2: "Las preguntas que padres y directores realmente hacen.",
       faq1_q: "¿Necesita mi hijo saber algo de español?", faq1_a: "No. Todo el programa asume cero español el primer día. Para la semana 2, cada niño puede presentarse en español.",
       faq2_q: "¿Es un currículo real o solo juego?", faq2_a: "Ambos — y ese es el punto. Ocho planes de lección escritos, objetivos reales de vocabulario cada semana, resultados medibles en el showcase. Creado por una educadora con PhD y 30 años en el aula.",
