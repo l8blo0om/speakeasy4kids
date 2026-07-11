@@ -206,69 +206,6 @@
     }
 
   
-    /* ── WELCOME SPLASH (no music push) ── */
-    .welcome-splash {
-      position: fixed; inset: 0; z-index: 9999;
-      background: rgba(11,11,11,0.85);
-      display: none; opacity: 0;
-      align-items: center; justify-content: center;
-      transition: opacity 0.35s ease;
-      backdrop-filter: blur(6px);
-      padding: 1rem;
-    }
-    .welcome-card {
-      background: #1A1A1A;
-      border: 2px solid var(--yellow);
-      padding: 2.4rem 2rem 1.9rem;
-      max-width: 400px; width: 100%;
-      text-align: center;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.55);
-      animation: wIn 0.35s ease;
-    }
-    @keyframes wIn { from { transform: scale(0.96); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-    .welcome-card img { width: 96px; height: 96px; border-radius: 6px; margin-bottom: 1.2rem; object-fit: cover; }
-    .welcome-card .pre { font-family: 'Oswald',sans-serif; font-size: 0.72rem; color: var(--yellow); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 0.55rem; font-weight: 700; }
-    .welcome-card .site-name { font-family: 'Oswald',sans-serif; font-size: 1.55rem; color: #FAF4E1; letter-spacing: 1.5px; text-transform: uppercase; line-height: 1.15; margin-bottom: 1.5rem; font-weight: 700; }
-    .welcome-card .enter-btn {
-      background: var(--yellow); color: #1A1A1A;
-      font-family: 'Oswald',sans-serif; font-weight: 700;
-      font-size: 0.95rem; letter-spacing: 4px; text-transform: uppercase;
-      padding: 0.8rem 2.4rem; border: 2px solid var(--yellow);
-      cursor: pointer; transition: all 0.15s; border-radius: 3px;
-      width: 100%;
-    }
-    .welcome-card .enter-btn:hover { background: #FAF4E1; border-color: #FAF4E1; }
-
-  
-    /* Parent / School quick-jump split — right after hero */
-    .quick-split { background: var(--cream); padding: 3rem 2rem; border-bottom: 6px solid var(--dark); }
-    .qs-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    .qs-card { background: #FFFEF8; border: 3px solid var(--dark); box-shadow: 8px 8px 0 var(--dark); padding: 2rem 1.75rem; text-align: center; text-decoration: none; color: inherit; transition: transform 0.15s, box-shadow 0.15s; display: block; }
-    .qs-card:hover { transform: translate(-3px,-3px); box-shadow: 11px 11px 0 var(--dark); }
-    .qs-eyebrow { font-family: 'Oswald',sans-serif; font-size: 0.72rem; letter-spacing: 3.5px; color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 0.4rem; }
-    .qs-h { font-family: 'Oswald',sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--dark); letter-spacing: 1px; text-transform: uppercase; }
-    .qs-h .arrow { display: inline-block; margin-left: 0.4rem; transition: transform 0.2s; }
-    .qs-card:hover .arrow { transform: translateX(4px); }
-    @media (max-width: 700px) { .qs-inner { grid-template-columns: 1fr; } }
-
-  
-    /* Tiny visit counter (bottom of footer) */
-    .visit-counter {
-      display: inline-block;
-      margin-top: 0.85rem;
-      font-family: 'Courier New', ui-monospace, monospace;
-      font-size: 0.72rem;
-      letter-spacing: 1.5px;
-      color: rgba(255,255,255,0.35);
-      background: rgba(255,255,255,0.05);
-      padding: 0.3rem 0.7rem;
-      border: 1px dashed rgba(255,255,255,0.15);
-      border-radius: 3px;
-    }
-    .visit-counter #vc { color: rgba(255,255,255,0.65); font-weight: 700; }
-    .visit-counter #vc.empty { opacity: 0.5; }
-
-  
     /* ── HUE-CYCLING UTILITIES (vibrant — playful kid palette) ── */
     .btn-glow {
       background: #0a0a0a; color: #fff; border: none;
@@ -347,6 +284,109 @@
       .coaster-neon { width: 68px; height: 68px; }
       .brand-rhythm { gap: 1rem; padding: 2rem 1rem; }
     }
+
+  
+    /* ── MONOPOLY TITLE DEED SPLASH ── */
+    .welcome-splash {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(11,11,11,0.86);
+      display: none; opacity: 0;
+      align-items: center; justify-content: center;
+      transition: opacity 0.35s ease;
+      backdrop-filter: blur(6px);
+      padding: 1rem;
+      font-family: 'Oswald', sans-serif;
+    }
+    .welcome-card {
+      background: #FFFEF8;
+      border: 3px solid #1A1A1A;
+      padding: 0;
+      max-width: 380px; width: 100%;
+      text-align: center;
+      box-shadow: 12px 12px 0 rgba(0,0,0,0.35);
+      animation: deedIn 0.4s ease;
+      color: #1A1A1A;
+      position: relative;
+      overflow: hidden;
+    }
+    @keyframes deedIn { from { transform: scale(0.94) translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+    .welcome-card .band {
+      background: #F5C518;
+      color: #1A1A1A;
+      padding: 1.1rem 1rem 0.85rem;
+      border-bottom: 3px solid #1A1A1A;
+    }
+    .welcome-card .deed-chip {
+      display: inline-block;
+      background: #1A1A1A; color: #F5C518;
+      font-size: 0.62rem; letter-spacing: 5px; font-weight: 700;
+      padding: 0.28rem 0.85rem;
+      margin-bottom: 0.65rem;
+    }
+    .welcome-card .site-name {
+      font-size: 1.4rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; line-height: 1.15;
+    }
+    .welcome-card .sub {
+      font-family: 'Special Elite', cursive;
+      font-size: 0.7rem; letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-top: 0.4rem;
+      opacity: 0.85;
+    }
+    .welcome-card .card-body {
+      padding: 1.5rem 1.75rem 1.35rem;
+    }
+    .welcome-card .welcome-line {
+      font-family: 'Special Elite', cursive;
+      font-size: 0.72rem; letter-spacing: 3px;
+      color: #666; text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+    .welcome-card .tagline {
+      font-family: 'Special Elite', cursive;
+      font-size: 1rem; color: #1A1A1A;
+      font-style: italic; line-height: 1.35;
+      margin-bottom: 1.5rem;
+      padding: 0 0.4rem;
+    }
+    .welcome-card .meta-rows {
+      border-top: 2px solid #1A1A1A;
+      margin-bottom: 1.5rem;
+    }
+    .welcome-card .meta-row {
+      display: flex; justify-content: space-between;
+      padding: 0.5rem 0.4rem;
+      border-bottom: 1px dashed rgba(0,0,0,0.2);
+      font-size: 0.78rem;
+    }
+    .welcome-card .meta-row:last-child { border-bottom: 2px solid #1A1A1A; }
+    .welcome-card .meta-row .k {
+      font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: #1A1A1A;
+    }
+    .welcome-card .meta-row .v {
+      font-family: 'Special Elite', cursive;
+      color: #333; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .welcome-card .enter-btn {
+      background: #1A1A1A; color: #F5C518;
+      font-family: 'Oswald', sans-serif; font-weight: 700;
+      font-size: 0.95rem; letter-spacing: 3px; text-transform: uppercase;
+      padding: 0.85rem 2rem; border: 2px solid #1A1A1A;
+      cursor: pointer; transition: all 0.15s;
+      width: 100%;
+    }
+    .welcome-card .enter-btn:hover {
+      background: #F5C518; color: #1A1A1A;
+    }
+    /* corner dashes reminiscent of monopoly card corners */
+    .welcome-card::before, .welcome-card::after {
+      content: ""; position: absolute; width: 22px; height: 22px;
+      border: 2px solid #1A1A1A;
+    }
+    .welcome-card::before { top: 6px; left: 6px; border-right: none; border-bottom: none; }
+    .welcome-card::after { bottom: 6px; right: 6px; border-left: none; border-top: none; }
 
   </style>
   <script type="application/ld+json">
@@ -954,13 +994,24 @@
 </script>
 
 
-<!-- WELCOME SPLASH -->
+<!-- MONOPOLY TITLE DEED SPLASH -->
 <div class="welcome-splash" id="welcomeSplash">
   <div class="welcome-card">
-    <img src="logo.png" alt="Speak Easy 4 Kids"/>
-    <div class="pre">Welcome to</div>
-    <div class="site-name">Speak Easy 4 Kids</div>
-    <button class="enter-btn" onclick="seEnter()">Enter</button>
+    <div class="band">
+      <div class="deed-chip">TITLE DEED</div>
+      <div class="site-name">SPEAK EASY 4 KIDS</div>
+      <div class="sub">The K–5 · Afterschool · Property</div>
+    </div>
+    <div class="card-body">
+      <div class="welcome-line">You have landed on</div>
+      <div class="tagline">Spanish that feels like recess.</div>
+      <div class="meta-rows">
+        <div class="meta-row"><span class="k">GRADES</span><span class="v">K – 5 mixed</span></div>
+        <div class="meta-row"><span class="k">LENGTH</span><span class="v">8-week session</span></div>
+        <div class="meta-row"><span class="k">START</span><span class="v">$129 · at school</span></div>
+      </div>
+      <button class="enter-btn" onclick="seEnter()">▸ PASS GO</button>
+    </div>
   </div>
 </div>
 <script>
@@ -975,23 +1026,5 @@
 })();
 </script>
 
-
-<script>
-(function(){
-  var el = document.getElementById('vc');
-  if (!el) return;
-  fetch('https://api.counterapi.dev/v1/speakeasy/speakeasy-kids/up')
-    .then(function(r){ return r.json(); })
-    .then(function(d){
-      var n = (d && (d.count != null ? d.count : d.up_count));
-      if (typeof n === 'number') {
-        el.textContent = n.toLocaleString();
-      } else {
-        el.classList.add('empty'); el.textContent = '—';
-      }
-    })
-    .catch(function(){ el.classList.add('empty'); el.textContent = '—'; });
-})();
-</script>
 </body>
 </html>
