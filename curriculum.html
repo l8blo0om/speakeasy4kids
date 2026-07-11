@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Speak Easy 4 Kids — Instructor Curriculum</title>
+<meta name="description" content="The full instructor guide for the Speak Easy 4 Kids method: six 6-week Spanish sessions for K–5, class rhythm, regulation toolkit, manners integration, and week-by-week themes."/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Special+Elite&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream:   #FAF4E1;
+    --board:   #F0E6C8;
+    --dark:    #1A1A1A;
+    --ink:     #2A2A2A;
+    --muted:   #6B6358;
+    --red:     #CC2529;
+    --yellow:  #F5C518;
+    --green:   #2D6B3C;
+    --blue:    #1B3A6B;
+    --paper:   #FFFEF8;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito', sans-serif; background: var(--cream); color: var(--ink); line-height: 1.65; }
+
+  /* ── DOC HEADER ── */
+  header.doc { background: var(--dark); color: var(--cream); padding: 3rem 2rem 2.5rem; border-bottom: 8px solid var(--yellow); }
+  header.doc .inner { max-width: 900px; margin: 0 auto; }
+  header.doc .eyebrow { font-family: 'Special Elite', cursive; font-size: 0.78rem; letter-spacing: 5px; color: var(--yellow); text-transform: uppercase; margin-bottom: 0.75rem; }
+  header.doc h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; line-height: 1.05; margin-bottom: 0.75rem; }
+  header.doc .sub { font-family: 'Special Elite', cursive; font-size: 1rem; color: rgba(250,244,225,0.75); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.75rem; }
+  header.doc .meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; border-top: 2px solid rgba(255,255,255,0.15); padding-top: 1.5rem; }
+  header.doc .meta .k { font-family: 'Oswald', sans-serif; font-size: 0.62rem; letter-spacing: 3px; color: var(--yellow); text-transform: uppercase; }
+  header.doc .meta .v { font-family: 'Oswald', sans-serif; font-size: 0.95rem; letter-spacing: 1px; margin-top: 0.25rem; text-transform: uppercase; }
+
+  /* ── CONTENTS ── */
+  .toc { background: var(--paper); border-bottom: 3px solid var(--dark); padding: 2rem; }
+  .toc-inner { max-width: 900px; margin: 0 auto; }
+  .toc-title { font-family: 'Oswald', sans-serif; font-size: 0.72rem; letter-spacing: 4px; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 1rem; }
+  .toc ol { columns: 2; column-gap: 2.5rem; list-style: none; padding-left: 0; counter-reset: toc; }
+  .toc li { padding: 0.35rem 0; font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 1px; break-inside: avoid; counter-increment: toc; }
+  .toc li::before { content: counter(toc, decimal-leading-zero) ". "; color: var(--red); font-weight: 700; margin-right: 0.5rem; }
+  .toc a { color: var(--ink); text-decoration: none; }
+  .toc a:hover { color: var(--red); }
+
+  /* ── SECTIONS ── */
+  main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+  section.chapter { margin-bottom: 4.5rem; }
+  .chapter-num { font-family: 'Oswald', sans-serif; font-size: 0.72rem; letter-spacing: 5px; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 0.6rem; }
+  h2 { font-family: 'Oswald', sans-serif; font-size: 1.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; line-height: 1.15; margin-bottom: 1.25rem; color: var(--dark); border-bottom: 3px solid var(--yellow); padding-bottom: 0.5rem; }
+  h3 { font-family: 'Oswald', sans-serif; font-size: 1.15rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 2rem 0 0.85rem; color: var(--dark); }
+  h4 { font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red); margin: 1.25rem 0 0.5rem; }
+  p { margin-bottom: 1rem; color: var(--ink); }
+  ul, ol { margin: 0.5rem 0 1.25rem 1.5rem; }
+  ul li, ol li { margin-bottom: 0.5rem; line-height: 1.6; }
+  strong { color: var(--dark); font-weight: 700; }
+  em { font-family: 'Special Elite', cursive; font-style: normal; letter-spacing: 0.5px; }
+
+  /* ── LEAD PARAGRAPH ── */
+  .lead { font-size: 1.1rem; line-height: 1.75; color: var(--ink); margin-bottom: 1.5rem; }
+
+  /* ── CALLOUT BOXES ── */
+  .callout { background: var(--paper); border: 3px solid var(--dark); box-shadow: 8px 8px 0 var(--dark); padding: 1.5rem 1.75rem; margin: 1.5rem 0; position: relative; }
+  .callout::before { content: attr(data-label); position: absolute; top: -0.75rem; left: 1.25rem; background: var(--red); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.68rem; letter-spacing: 3px; padding: 0.25rem 0.75rem; font-weight: 700; text-transform: uppercase; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout.yellow::before { background: var(--yellow); color: var(--dark); }
+  .callout.green::before { background: var(--green); color: #fff; }
+  .callout.blue::before { background: var(--blue); color: #fff; }
+
+  /* ── TIMETABLE ── */
+  .timeline { background: var(--paper); border: 3px solid var(--dark); padding: 1rem 1.5rem; margin: 1.5rem 0; }
+  .timeline .row { display: grid; grid-template-columns: 100px 1fr; gap: 1.25rem; padding: 0.65rem 0; border-bottom: 1px dashed rgba(0,0,0,0.15); align-items: baseline; }
+  .timeline .row:last-child { border-bottom: none; }
+  .timeline .time { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--red); letter-spacing: 1px; }
+  .timeline .desc { font-size: 0.95rem; }
+  .timeline .desc strong { display: block; margin-bottom: 0.15rem; }
+  .timeline .desc .small { font-size: 0.85rem; color: var(--muted); }
+
+  /* ── SESSION GRID ── */
+  .session-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin: 1.5rem 0; }
+  .session-card { background: var(--paper); border: 2px solid var(--dark); padding: 1.25rem 1.35rem; position: relative; }
+  .session-card .letter { position: absolute; top: -0.7rem; left: 1rem; background: var(--dark); color: var(--yellow); font-family: 'Oswald', sans-serif; font-weight: 700; padding: 0.3rem 0.7rem; letter-spacing: 3px; font-size: 0.75rem; }
+  .session-card h4 { color: var(--dark); margin-top: 0.35rem; margin-bottom: 0.5rem; font-size: 1rem; }
+  .session-card ul { margin: 0.5rem 0 0 1rem; font-size: 0.88rem; }
+  .session-card li { margin-bottom: 0.25rem; }
+
+  /* ── WEEK-BY-WEEK ── */
+  .week-block { background: var(--paper); border-left: 5px solid var(--yellow); padding: 1.25rem 1.5rem; margin: 1rem 0; }
+  .week-block.finale { border-left-color: var(--red); background: #FFF8DE; }
+  .week-block.pinata { border-left-color: var(--red); }
+  .week-block .week-label { font-family: 'Oswald', sans-serif; font-size: 0.7rem; letter-spacing: 3px; color: var(--red); font-weight: 700; text-transform: uppercase; margin-bottom: 0.35rem; }
+  .week-block .theme { font-family: 'Oswald', sans-serif; font-size: 1.35rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 0.6rem; text-transform: uppercase; color: var(--dark); }
+  .week-block .theme em { font-family: 'Special Elite', cursive; color: var(--red); }
+  .week-block dl { margin-top: 0.5rem; font-size: 0.92rem; }
+  .week-block dl dt { font-family: 'Oswald', sans-serif; font-weight: 700; letter-spacing: 1px; color: var(--dark); text-transform: uppercase; font-size: 0.72rem; margin-top: 0.75rem; margin-bottom: 0.15rem; }
+  .week-block dl dd { color: var(--ink); margin-left: 0; line-height: 1.55; }
+
+  /* ── PHRASE LIST ── */
+  .phrases { background: var(--paper); border: 2px solid var(--dark); padding: 1.25rem 1.5rem; margin: 1rem 0; }
+  .phrases-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; padding: 0.5rem 0; border-bottom: 1px dashed rgba(0,0,0,0.15); }
+  .phrases-row:last-child { border-bottom: none; }
+  .phrases-row .es { font-family: 'Oswald', sans-serif; font-weight: 700; color: var(--red); letter-spacing: 0.5px; text-transform: uppercase; font-size: 0.95rem; }
+  .phrases-row .en { font-family: 'Special Elite', cursive; color: var(--ink); font-size: 0.9rem; }
+
+  /* ── NAV LINK STRIP ── */
+  .backnav { background: var(--dark); color: var(--cream); padding: 1.25rem 2rem; text-align: center; font-family: 'Oswald', sans-serif; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; }
+  .backnav a { color: var(--yellow); text-decoration: none; margin: 0 0.75rem; }
+  .backnav a:hover { color: #fff; }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; }
+    header.doc, .toc, .backnav { display: block; page-break-after: avoid; }
+    section.chapter { page-break-inside: avoid; }
+    .callout { box-shadow: none; }
+    .week-block { box-shadow: none; }
+  }
+  @media (max-width: 700px) {
+    header.doc .meta { grid-template-columns: repeat(2, 1fr); }
+    .toc ol { columns: 1; }
+    .session-grid { grid-template-columns: 1fr; }
+    main { padding: 2rem 1.25rem 4rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header class="doc">
+  <div class="inner">
+    <div class="eyebrow">Instructor Curriculum · v1</div>
+    <h1>Speak Easy 4 Kids</h1>
+    <div class="sub">The K–5 Spanish Method · By Dr. Nicole Bishop</div>
+    <div class="meta">
+      <div><div class="k">Audience</div><div class="v">K – 5</div></div>
+      <div><div class="k">Sessions</div><div class="v">6 rotating</div></div>
+      <div><div class="k">Length</div><div class="v">6 wks × 60 min</div></div>
+      <div><div class="k">Language</div><div class="v">Spanish</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ TABLE OF CONTENTS ══════════ -->
+<nav class="toc" id="toc">
+  <div class="toc-inner">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#method">The Method</a></li>
+      <li><a href="#rhythm">Weekly Class Rhythm</a></li>
+      <li><a href="#infrastructure">Social Infrastructure</a></li>
+      <li><a href="#regulation">Regulation Toolkit</a></li>
+      <li><a href="#stretches">Animal Stretches</a></li>
+      <li><a href="#manners">Weekly Manners Ladder</a></li>
+      <li><a href="#embodied">Embodied Learning Library</a></li>
+      <li><a href="#six-sessions">The Six Sessions</a></li>
+      <li><a href="#session-a">Session A · In Detail</a></li>
+      <li><a href="#pinata">The Week-4 Piñata Protocol</a></li>
+      <li><a href="#finale">The Week-6 Finale Showcase</a></li>
+      <li><a href="#takehome">Take-Home Sheets</a></li>
+      <li><a href="#certificates">Recognition &amp; Certificates</a></li>
+      <li><a href="#materials">Materials Checklist</a></li>
+    </ol>
+  </div>
+</nav>
+
+<main>
+
+<!-- ══════════ 1. THE METHOD ══════════ -->
+<section class="chapter" id="method">
+  <div class="chapter-num">Chapter One</div>
+  <h2>The Method</h2>
+  <p class="lead">Speak Easy 4 Kids is not a curriculum. It is a rhythm. Six thematic sessions rotate through the school year; every week within a session follows the same predictable arc, so kids never wonder what happens next — they wonder <em>which words they'll get to play with today</em>.</p>
+
+  <h3>Six principles that never change</h3>
+
+  <h4>01 · Played, not studied</h4>
+  <p>Every vocabulary point is delivered as a game. Pictionary, charades, BINGO, scavenger hunts, parachute drops, embodied miming. The prize is the vocabulary. Kids stop noticing they are learning.</p>
+
+  <h4>02 · Speak Easy Dollars</h4>
+  <p>The classroom's token economy. Kids earn for showing up, speaking unprompted, catching pronunciation mistakes, helping a peer. They spend on rounds, prizes, hand stamps, or a chance to lead the next game. The economy is what turns risk into fun.</p>
+
+  <h4>03 · Ritual over variety</h4>
+  <p>Kids need the same opening every week (Greeting Gate → Feelings Wheel → Parachute). Predictable structure lowers cognitive load. That freed load is exactly what a second language needs to land.</p>
+
+  <h4>04 · Culture inside the words</h4>
+  <p>You do not teach <em>queso</em>. You teach how to build a pizza in Spanish — sitting in a V-stretch on the floor, miming cheese onto your legs. Vocabulary anchored to lived experience sticks.</p>
+
+  <h4>05 · No anonymous students</h4>
+  <p>By Week 2, every kid knows every other kid's name. The Greeting Gate makes it non-optional. The Friend Bench and the Calm Space give shy or overwhelmed kids a place to be — with language for asking.</p>
+
+  <h4>06 · Regulation as content</h4>
+  <p>One breath technique per session (belly, flower, volcano, buddy, cookie, balloon). One animal stretch anchor (dog, cat, butterfly, frog, tree, lion). Kids leave with Spanish AND a nervous-system toolkit. Both are the curriculum.</p>
+</section>
+
+<!-- ══════════ 2. WEEKLY CLASS RHYTHM ══════════ -->
+<section class="chapter" id="rhythm">
+  <div class="chapter-num">Chapter Two</div>
+  <h2>Weekly Class Rhythm</h2>
+  <p class="lead">Sixty minutes. Same order every week. Different vocabulary and different games inside the blocks. This is the operating system.</p>
+
+  <div class="timeline">
+    <div class="row"><div class="time">0–5 min</div><div class="desc"><strong>Greeting Gate</strong><span class="small">Kids arrive one at a time and must greet the instructor + at least two peers by name in Spanish before joining the circle. First week: heavy prompting. By Week 4: automatic.</span></div></div>
+    <div class="row"><div class="time">5–10 min</div><div class="desc"><strong>Feelings Wheel Check-In</strong><span class="small">Each kid points to how they feel on the Spanish feelings wheel — feliz, triste, cansado/a, emocionado/a. They say the word out loud. Anchors emotional vocabulary to real states.</span></div></div>
+    <div class="row"><div class="time">10–15 min</div><div class="desc"><strong>Parachute Opener</strong><span class="small">Everyone under the parachute. Instructor calls categories — "Todos los que tienen un hermano, corran debajo!" — and the correct kids run underneath. Categories double as vocabulary review.</span></div></div>
+    <div class="row"><div class="time">15–35 min</div><div class="desc"><strong>Theme + Game</strong><span class="small">The week's vocabulary, taught through a game. This is the core learning block. Never a worksheet. Pictionary, BINGO, charades, matching, embodied learning.</span></div></div>
+    <div class="row"><div class="time">35–45 min</div><div class="desc"><strong>Regulation Break</strong><span class="small">The session's breath (belly / flower / volcano / buddy / cookie / balloon) plus the session's animal stretch. Two to three minutes of quiet nervous-system reset.</span></div></div>
+    <div class="row"><div class="time">45–55 min</div><div class="desc"><strong>Embodied Practice</strong><span class="small">Kids USE the words through movement: Somos Pizza, Somos Ropa, Somos Animales. Vocabulary + proprioception in the same second.</span></div></div>
+    <div class="row"><div class="time">55–60 min</div><div class="desc"><strong>Closing Ritual + Take-Home</strong><span class="small">Speak Easy Dollars distributed. Take-home sheet with the week's vocab + pronunciation guide + family reinforcement suggestions. Goodbye Song. Passport stamp.</span></div></div>
+  </div>
+
+  <div class="callout" data-label="Instructor Note">
+    <p>Never let the rhythm collapse to save time. If you skip the Greeting Gate, kids notice, and the "we're a class" feeling erodes for the whole hour. The predictability is the pedagogy.</p>
+  </div>
+</section>
+
+<!-- ══════════ 3. SOCIAL INFRASTRUCTURE ══════════ -->
+<section class="chapter" id="infrastructure">
+  <div class="chapter-num">Chapter Three</div>
+  <h2>Social Infrastructure</h2>
+  <p class="lead">Four fixtures in the room. Introduce all four on Day 1. They are the difference between a class and a community.</p>
+
+  <h3>The Greeting Gate</h3>
+  <p>The physical space at the classroom entrance where every kid must greet before joining. The instructor stands here Week 1 and Week 2. From Week 3 on, a rotating student greeter holds the role. Non-negotiable.</p>
+  <div class="phrases">
+    <div class="phrases-row"><span class="es">¡Hola, [name]!</span><span class="en">Hi, [name]!</span></div>
+    <div class="phrases-row"><span class="es">¿Cómo estás hoy?</span><span class="en">How are you today?</span></div>
+    <div class="phrases-row"><span class="es">Estoy bien / cansado / emocionado</span><span class="en">I'm good / tired / excited</span></div>
+  </div>
+
+  <h3>The Feelings Wheel</h3>
+  <p>Poster-sized wheel on the wall with six illustrated Spanish emotions: <em>feliz, triste, enojado/a, asustado/a, cansado/a, emocionado/a</em>. Every kid points to theirs at check-in. Instructor references it throughout the class ("¿Estás cansada después de la carrera?").</p>
+
+  <h3>Banco de Amigos — The Friend Bench</h3>
+  <p>A small designated spot (a bench, a rug, a chair pair) where a kid can go if they feel lonely, left out of a game, or without a partner. Any kid who sees someone on the bench must go over, greet them, and become their partner for the next activity.</p>
+  <div class="callout yellow" data-label="Language Anchor">
+    <p><em>"¿Quieres ser mi amigo/a?" · "Estoy solo/a" · "Voy al Banco de Amigos"</em></p>
+    <p>Teaches kids that loneliness is speakable, and that seeing loneliness in someone else creates a small responsibility to respond.</p>
+  </div>
+
+  <h3>Espacio Tranquilo — The Calm Space</h3>
+  <p>A separate quiet corner (cushion + soft fabric + optional fidget). A kid can go there when they're overwhelmed, overstimulated, or need to be alone. No shame. No time limit. Instructor checks in with a soft <em>"¿Estás mejor?"</em> after a few minutes.</p>
+  <div class="callout blue" data-label="Language Anchor">
+    <p><em>"Necesito estar tranquilo/a" · "Voy al Espacio Tranquilo" · "Estoy agitado/a"</em></p>
+    <p>Teaches self-regulation as an available option, in Spanish, that a kid can request without argument.</p>
+  </div>
+
+  <h3>Names by Week 2</h3>
+  <p>Week 1: circle intro; every kid says their name; class repeats it three times. Poster with every name goes up on the wall. Week 2: greetings must be by name. By Week 3, the room is not anonymous — and it never becomes anonymous again.</p>
+</section>
+
+<!-- ══════════ 4. REGULATION TOOLKIT ══════════ -->
+<section class="chapter" id="regulation">
+  <div class="chapter-num">Chapter Four</div>
+  <h2>Regulation Toolkit</h2>
+  <p class="lead">One breathing technique per session. Kids who cycle through all six sessions leave with a small nervous-system toolkit they can use anywhere.</p>
+
+  <div class="session-grid">
+    <div class="session-card"><div class="letter">A</div><h4>Belly Breath (Respiración de barriga)</h4><p>Hand on belly, breathe in — belly balloons out. Breathe out — belly goes flat. Six slow rounds. Foundation. Also pairs with the 5-4-3-2-1 grounding scan.</p></div>
+    <div class="session-card"><div class="letter">B</div><h4>Flower Breath (Respiración de flor)</h4><p>Cupped hands as a flower to the nose. Inhale the scent — long, slow. Exhale — <em>"aaaah"</em>. Great for calming after intense play. Pair with tactile scent anchoring.</p></div>
+    <div class="session-card"><div class="letter">C</div><h4>Volcano Breath (Respiración de volcán)</h4><p>Hands together at heart. Inhale — arms up over head. Exhale — hands "erupt" out and down. Discharges energy. Pair with shake-it-out and power poses.</p></div>
+    <div class="session-card"><div class="letter">D</div><h4>Buddy Breath (Respiración con amigo/a)</h4><p>Partners sit knee-to-knee. Match breathing to the other person for six rounds. Teaches co-regulation. Pair with partner mirror-stretch.</p></div>
+    <div class="session-card"><div class="letter">E</div><h4>Cookie Breath (Respiración de galleta)</h4><p>Imagine holding a warm cookie. Inhale the smell. Exhale to cool it down (long slow <em>"whoooo"</em>). Trains focus and long exhale — vagal activation.</p></div>
+    <div class="session-card"><div class="letter">F</div><h4>Balloon Breath (Respiración de globo)</h4><p>Arms out to sides. Inhale — arms rise, chest expands like a balloon. Exhale slow — arms sink, balloon deflates. Full-body integration. Grounding.</p></div>
+  </div>
+
+  <div class="callout" data-label="Instructor Note">
+    <p>Introduce Week 1. Repeat Weeks 2–5 as needed (before or after high-energy blocks). Week 6 shows off the toolkit to families as part of the finale.</p>
+  </div>
+</section>
+
+<!-- ══════════ 5. ANIMAL STRETCHES ══════════ -->
+<section class="chapter" id="stretches">
+  <div class="chapter-num">Chapter Five</div>
+  <h2>Animal Stretches</h2>
+  <p class="lead">Movement anchors for the regulation break. Each stretch has an animal name in Spanish — kids get the vocabulary and the stretch in one move.</p>
+
+  <div class="phrases">
+    <div class="phrases-row"><span class="es">Perro boca abajo</span><span class="en">Downward dog</span></div>
+    <div class="phrases-row"><span class="es">Gato y vaca</span><span class="en">Cat and cow</span></div>
+    <div class="phrases-row"><span class="es">Mariposa</span><span class="en">Butterfly (soles-together sit)</span></div>
+    <div class="phrases-row"><span class="es">Rana</span><span class="en">Frog squat</span></div>
+    <div class="phrases-row"><span class="es">Árbol</span><span class="en">Tree pose</span></div>
+    <div class="phrases-row"><span class="es">León</span><span class="en">Lion (roar + stick out tongue)</span></div>
+  </div>
+</section>
+
+<!-- ══════════ 6. MANNERS LADDER ══════════ -->
+<section class="chapter" id="manners">
+  <div class="chapter-num">Chapter Six</div>
+  <h2>Weekly Manners Ladder</h2>
+  <p class="lead">One politeness phrase highlighted each week. Instructor models it constantly. Kids get Speak Easy Dollars for using it unprompted. By Week 6, all six are in circulation.</p>
+
+  <div class="phrases">
+    <div class="phrases-row"><span class="es">Week 1 · Gracias / De nada</span><span class="en">Thank you / You're welcome</span></div>
+    <div class="phrases-row"><span class="es">Week 2 · Por favor / Disculpa</span><span class="en">Please / Excuse me</span></div>
+    <div class="phrases-row"><span class="es">Week 3 · ¿Puedo…?</span><span class="en">May I…?</span></div>
+    <div class="phrases-row"><span class="es">Week 4 · ¡Bien hecho!</span><span class="en">Well done! (piñata week)</span></div>
+    <div class="phrases-row"><span class="es">Week 5 · ¿Cómo estás?</span><span class="en">How are you?</span></div>
+    <div class="phrases-row"><span class="es">Week 6 · Adiós · Hasta luego</span><span class="en">Goodbye · See you later</span></div>
+  </div>
+</section>
+
+<!-- ══════════ 7. EMBODIED LEARNING ══════════ -->
+<section class="chapter" id="embodied">
+  <div class="chapter-num">Chapter Seven</div>
+  <h2>Embodied Learning Library</h2>
+  <p class="lead">The vocabulary lands in the body, not just the ear. These are the signature Speak Easy moves.</p>
+
+  <h3>Somos Pizza — We Are Pizza</h3>
+  <p>Kids sit in a V-stretch on the floor, legs long. Instructor calls out ingredients in Spanish — <em>¡Queso! ¡Tomate! ¡Cebolla! ¡Jalapeños!</em> Kids mime spreading each ingredient across their legs and torso. The V-sit doubles as a hamstring stretch. Ingredients get repeated many times without it feeling like drill.</p>
+
+  <h3>Somos Ropa — We Are Clothes</h3>
+  <p>Kids stand. Instructor calls clothing vocabulary — <em>¡Sombrero!</em> — kids mime putting on a hat. <em>¡Zapatos!</em> — they mime tying shoes. <em>¡Chaqueta!</em> — jacket, arms through sleeves. Vocabulary + gross motor + laughter.</p>
+
+  <h3>Somos Animales — We Are Animals</h3>
+  <p>Instructor calls an animal in Spanish; kids do the sound + a stretch that fits. <em>¡Gato!</em> = cat-cow stretch and meow. <em>¡Rana!</em> = frog squat and ribbit. Doubles as the animal-stretch review.</p>
+
+  <h3>Parachute Colors</h3>
+  <p>Kids hold the parachute edge. Instructor calls a color in Spanish. Kids holding that section lift high while chanting the color. Advance the game with compound calls: <em>¡Tres rojos!</em> (three reds lift), <em>¡Verde salta!</em> (green jumps while holding).</p>
+
+  <h3>Restaurant Role-Play</h3>
+  <p>One kid is the server, others are customers. Menu is week's food vocabulary. Kids order in Spanish — <em>"Un taco por favor"</em> — and pay in Speak Easy Dollars.</p>
+</section>
+
+<!-- ══════════ 8. SIX SESSIONS ══════════ -->
+<section class="chapter" id="six-sessions">
+  <div class="chapter-num">Chapter Eight</div>
+  <h2>The Six Sessions</h2>
+  <p class="lead">A full school year is six 6-week sessions. Kids can enroll in any single session; the ones who cycle through all six get the whole toolkit. Session A is the foundation and is detailed in the next chapter. Sessions B–F share the same structure with rotating themes.</p>
+
+  <div class="session-grid">
+    <div class="session-card"><div class="letter">A</div><h4>Foundation</h4><ul><li>Numbers 1–10</li><li>Colors</li><li>Weather</li><li>Animals</li><li>Clothing basics</li><li>Body parts + greetings</li></ul><p style="margin-top:0.5rem;font-size:0.82rem;color:var(--muted);"><em>Breath: Belly. Stretch: Perro.</em></p></div>
+
+    <div class="session-card"><div class="letter">B</div><h4>Motion &amp; Place</h4><ul><li>Transportation</li><li>Beach vocabulary</li><li>Action verbs (correr, saltar, nadar)</li><li>Numbers 11–15</li><li>Weather + seasons</li></ul><p style="margin-top:0.5rem;font-size:0.82rem;color:var(--muted);"><em>Breath: Flor. Stretch: Gato-vaca.</em></p></div>
+
+    <div class="session-card"><div class="letter">C</div><h4>Feelings &amp; Home</h4><ul><li>Feelings vocabulary (expanded)</li><li>Foods (breakfast, snacks)</li><li>Clothing (expanded)</li><li>House vocabulary</li><li>Family expanded (aunt, uncle, cousin)</li></ul><p style="margin-top:0.5rem;font-size:0.82rem;color:var(--muted);"><em>Breath: Volcán. Stretch: Mariposa.</em></p></div>
+
+    <div class="session-card"><div class="letter">D</div><h4>Together</h4><ul><li>Numbers 16–20</li><li>Partner activities</li><li>Sports</li><li>Fruits</li><li>Opposites (grande/pequeño, etc.)</li></ul><p style="margin-top:0.5rem;font-size:0.82rem;color:var(--muted);"><em>Breath: Con amigo. Stretch: Rana.</em></p></div>
+
+    <div class="session-card"><div class="letter">E</div><h4>School &amp; Days</h4><ul><li>Body parts (expanded with Macarena)</li><li>Vegetables</li><li>Days of the week</li><li>Classroom items</li><li>Animals (round two)</li></ul><p style="margin-top:0.5rem;font-size:0.82rem;color:var(--muted);"><em>Breath: Galleta. Stretch: Árbol.</em></p></div>
+
+    <div class="session-card"><div class="letter">F</div><h4>Time &amp; Celebration</h4><ul><li>Months of the year (Macarena)</li><li>Numbers 20–30</li><li>Weather (expanded)</li><li>Holidays &amp; festivals</li><li>Storytelling vocabulary</li></ul><p style="margin-top:0.5rem;font-size:0.82rem;color:var(--muted);"><em>Breath: Globo. Stretch: León.</em></p></div>
+  </div>
+
+  <div class="callout yellow" data-label="Universal Rule">
+    <p><strong>Every session, Week 4 is Piñata Week</strong> — a mid-session celebration that kids remember and tell parents about. <strong>Every session, Week 6 is the Finale Showcase</strong> — families invited to see what their kids can do.</p>
+  </div>
+</section>
+
+<!-- ══════════ 9. SESSION A DETAIL ══════════ -->
+<section class="chapter" id="session-a">
+  <div class="chapter-num">Chapter Nine</div>
+  <h2>Session A · In Detail</h2>
+  <p class="lead">The foundation session. Every certified instructor teaches this one first. It establishes every ritual, every phrase set, and every classroom fixture that every subsequent session inherits.</p>
+
+  <div class="week-block">
+    <div class="week-label">Week 1</div>
+    <div class="theme">¡Hola! · <em>Numbers 1–10 + Names</em></div>
+    <dl>
+      <dt>Vocabulary</dt><dd>Uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez. Mi nombre es… Me llamo… ¡Mucho gusto!</dd>
+      <dt>Game</dt><dd>Hot Potato with a soft ball. Whoever holds the ball on the beat says <em>"Me llamo [name]"</em> and passes.</dd>
+      <dt>Manners phrase</dt><dd>Gracias / De nada.</dd>
+      <dt>Introduce today</dt><dd>Greeting Gate · Feelings Wheel · Banco de Amigos · Espacio Tranquilo · Speak Easy Dollars.</dd>
+      <dt>Take-home</dt><dd>Numbers 1–10 pronunciation card + a page of family reinforcement suggestions.</dd>
+    </dl>
+  </div>
+
+  <div class="week-block">
+    <div class="week-label">Week 2</div>
+    <div class="theme">Los Colores · <em>Colors</em></div>
+    <dl>
+      <dt>Vocabulary</dt><dd>Rojo, azul, amarillo, verde, negro, blanco, rosa, morado.</dd>
+      <dt>Game</dt><dd>Twister with color names in Spanish. Also parachute colors — lift when your color is called.</dd>
+      <dt>Manners phrase</dt><dd>Por favor / Disculpa.</dd>
+      <dt>Milestone</dt><dd>By end of Week 2, every kid greets every other kid by name. This is enforced at the Greeting Gate.</dd>
+      <dt>Take-home</dt><dd>Colors flashcard sheet + a suggestion for a family "color hunt" walk.</dd>
+    </dl>
+  </div>
+
+  <div class="week-block">
+    <div class="week-label">Week 3</div>
+    <div class="theme">El Tiempo · <em>Weather + Open/Close</em></div>
+    <dl>
+      <dt>Vocabulary</dt><dd>Sol, lluvia, nieve, viento, calor, frío. Abre, cierra.</dd>
+      <dt>Game</dt><dd>Weather charades. Kids act out weather; class guesses in Spanish. Prop: an umbrella opens/closes on <em>"abre/cierra"</em> commands.</dd>
+      <dt>Manners phrase</dt><dd>¿Puedo…?</dd>
+      <dt>Take-home</dt><dd>A weekly weather chart. Kids track each day of the week in Spanish for the household to see.</dd>
+    </dl>
+  </div>
+
+  <div class="week-block pinata">
+    <div class="week-label">Week 4 · Piñata Week</div>
+    <div class="theme">Los Animales · <em>Animals + PIÑATA celebration</em></div>
+    <dl>
+      <dt>Vocabulary</dt><dd>Gato, perro, pájaro, pez, conejo, caballo, vaca, oveja.</dd>
+      <dt>Game</dt><dd>Old MacDonald in Spanish. Animal charades. Puppet parade.</dd>
+      <dt>Manners phrase</dt><dd>¡Bien hecho!</dd>
+      <dt>Piñata block</dt><dd>Mid-session cultural celebration. A small piñata with wrapped candies + review-vocabulary slips inside. Kids take turns swinging while class chants <em>"¡Dale, dale, dale!"</em> Prizes trigger a mid-session buzz that families hear about at home — the point is to drive re-enrollment by making Week 4 the story the kid brings home.</dd>
+      <dt>Take-home</dt><dd>Animal vocabulary sheet + a story starter: <em>"In our language, dogs say 'woof.' In Spanish they say 'guau guau.'"</em></dd>
+    </dl>
+  </div>
+
+  <div class="week-block">
+    <div class="week-label">Week 5</div>
+    <div class="theme">La Ropa · <em>Clothing</em></div>
+    <dl>
+      <dt>Vocabulary</dt><dd>Camisa, pantalones, zapatos, sombrero, chaqueta, vestido.</dd>
+      <dt>Game</dt><dd>Somos Ropa (embodied). Felt-board dressing game with prop clothes. Clothesline race where teams peg items after hearing the Spanish word.</dd>
+      <dt>Manners phrase</dt><dd>¿Cómo estás?</dd>
+      <dt>Take-home</dt><dd>Clothing labels sheet — kids label items in their own room in Spanish for a week.</dd>
+    </dl>
+  </div>
+
+  <div class="week-block finale">
+    <div class="week-label">Week 6 · Finale</div>
+    <div class="theme">El Showcase · <em>Body parts + greetings + performance</em></div>
+    <dl>
+      <dt>Vocabulary</dt><dd>Cabeza, ojos, nariz, boca, orejas, hombros, rodillas, pies. Plus a greeting review.</dd>
+      <dt>Game</dt><dd>Cabeza · Hombros · Rodillas y Pies (Head · Shoulders · Knees · Toes in Spanish). Hokey Pokey.</dd>
+      <dt>Manners phrase</dt><dd>Adiós · Hasta luego.</dd>
+      <dt>Showcase block</dt><dd>Families invited in the second half of class. Kids perform three things: a greeting round-robin with each family member, one game demonstration, and one embodied learning bit (Somos Pizza is the crowd-pleaser). Certificates + passport stamps + a farewell photo. Enrollment pitch for Session B goes home in the take-home packet.</dd>
+      <dt>Take-home</dt><dd>Passport with all six stamps + a certificate + a flyer for Session B.</dd>
+    </dl>
+  </div>
+
+  <div class="callout" data-label="Instructor Note">
+    <p>Sessions B–F follow this exact rhythm. The Piñata always lands on Week 4. The Finale always lands on Week 6. Only the vocabulary themes rotate.</p>
+  </div>
+</section>
+
+<!-- ══════════ 10. PIÑATA PROTOCOL ══════════ -->
+<section class="chapter" id="pinata">
+  <div class="chapter-num">Chapter Ten</div>
+  <h2>The Week-4 Piñata Protocol</h2>
+  <p class="lead">The piñata is not decoration. It is the enrollment engine for the next session. When a kid comes home telling their parents about the piñata, the parent registers for Session B before Week 6 pricing goes up.</p>
+
+  <h3>Materials</h3>
+  <ul>
+    <li>One small piñata (~$8, any store-bought)</li>
+    <li>Wrapped candies</li>
+    <li>Slips of paper with review-vocabulary from Weeks 1–3 (each slip = one review word)</li>
+    <li>A blindfold (optional; younger kids skip)</li>
+    <li>A soft foam bat</li>
+  </ul>
+
+  <h3>The Ritual</h3>
+  <ol>
+    <li>Explain the cultural origin. Piñatas come from Mexico and Central America. This is part of the language — not just a party.</li>
+    <li>Load the piñata with candies AND vocabulary slips.</li>
+    <li>Class chants <em>"¡Dale, dale, dale, no pierdas el tino!"</em> as each kid takes their swing (older kids blindfolded, younger kids not).</li>
+    <li>When it breaks — every kid grabs. Each candy comes with a vocabulary slip. Kids read their slip out loud to claim the candy.</li>
+    <li>Group photo. Send home with the take-home sheet.</li>
+  </ol>
+</section>
+
+<!-- ══════════ 11. FINALE SHOWCASE ══════════ -->
+<section class="chapter" id="finale">
+  <div class="chapter-num">Chapter Eleven</div>
+  <h2>The Week-6 Finale Showcase</h2>
+  <p class="lead">Families invited. Class runs 90 minutes instead of 60 for this week only. The goal is threefold: kids show their skills, families see the method, and Session B enrollment closes.</p>
+
+  <h3>Run of Show</h3>
+  <div class="timeline">
+    <div class="row"><div class="time">0–15 min</div><div class="desc"><strong>Normal class opening (kids only)</strong><span class="small">Greeting Gate + Feelings Wheel + parachute — a warm-up families arrive during, so they see the ritual in action.</span></div></div>
+    <div class="row"><div class="time">15–20 min</div><div class="desc"><strong>Family greeting circle</strong><span class="small">Every kid introduces their family in Spanish. <em>"Ella es mi mamá. Se llama…"</em></span></div></div>
+    <div class="row"><div class="time">20–40 min</div><div class="desc"><strong>Game demo</strong><span class="small">Kids run one of the games from a prior week — parents play along in Spanish.</span></div></div>
+    <div class="row"><div class="time">40–55 min</div><div class="desc"><strong>Embodied learning bit</strong><span class="small">Somos Pizza is the crowd-pleaser. Everyone V-sits and mimes toppings. Loud laughter is normal and desired.</span></div></div>
+    <div class="row"><div class="time">55–70 min</div><div class="desc"><strong>Certificates + passport stamps</strong><span class="small">Each kid gets their achievement certificate + final passport stamp. Photos.</span></div></div>
+    <div class="row"><div class="time">70–90 min</div><div class="desc"><strong>Instructor Q&amp;A + Session B enrollment</strong><span class="small">Instructor answers parent questions. Session B info sheets are on a table. Sibling discount promoted.</span></div></div>
+  </div>
+</section>
+
+<!-- ══════════ 12. TAKE-HOME SHEETS ══════════ -->
+<section class="chapter" id="takehome">
+  <div class="chapter-num">Chapter Twelve</div>
+  <h2>Take-Home Sheets</h2>
+  <p class="lead">Every week, every kid leaves with a single sheet. The sheet is the interface between the classroom and the household. The goal is to give parents enough that they can reinforce without needing to speak Spanish themselves.</p>
+
+  <h3>Standard sheet layout</h3>
+  <ul>
+    <li><strong>Top:</strong> Week number + theme name in big Spanish letters</li>
+    <li><strong>Vocabulary block:</strong> This week's 5–8 words with pronunciation guide in parentheses. <em>Ex: gato (GAH-toh) — cat.</em></li>
+    <li><strong>Manners phrase of the week:</strong> Bold, its own line.</li>
+    <li><strong>Suggestions for home:</strong> 3–4 casual reinforcement ideas. <em>Ex: "At dinner, ask your child to name the food in Spanish before eating it."</em></li>
+    <li><strong>Song/game we did:</strong> Name it so a parent can ask about it.</li>
+    <li><strong>Passport stamp box:</strong> Empty box for the kid to get stamped at next week's class.</li>
+  </ul>
+</section>
+
+<!-- ══════════ 13. CERTIFICATES ══════════ -->
+<section class="chapter" id="certificates">
+  <div class="chapter-num">Chapter Thirteen</div>
+  <h2>Recognition &amp; Certificates</h2>
+  <p class="lead">Two mid-session, one end-of-session. Cost per certificate is essentially zero — printer paper and cardstock. The behavioral value is enormous.</p>
+
+  <h3>Good Conduct Award</h3>
+  <p>Given ad-hoc to kids who have shown a specific behavioral shift — the kid who was disruptive but had a quieter week, the kid who used the Friend Bench well, the kid who chose the Calm Space instead of escalating. Not a participation trophy. Named on the certificate: <em>"Given to [Name] for using the Espacio Tranquilo when he needed to."</em></p>
+
+  <h3>Achievement Award</h3>
+  <p>Given for concrete language milestones. First unprompted full sentence in Spanish. First peer they taught a word to. Best pronunciation of the week. Also given for helping — teaching, translating, encouraging.</p>
+
+  <h3>Session Completion Certificate</h3>
+  <p>End of Week 6. Every kid gets one. Signed by the instructor. Names the specific session (<em>"has completed Session A: Foundation"</em>). Doubles as a re-enrollment prompt — parents keep them, and the next session sticker is the invitation.</p>
+</section>
+
+<!-- ══════════ 14. MATERIALS ══════════ -->
+<section class="chapter" id="materials">
+  <div class="chapter-num">Chapter Fourteen</div>
+  <h2>Materials Checklist</h2>
+
+  <h3>Every class, every week</h3>
+  <ul>
+    <li>Parachute (~$20 — school gym often has one already)</li>
+    <li>Feelings Wheel poster (laminated)</li>
+    <li>Class roster + name tags for Week 1</li>
+    <li>Passport booklets — one per kid (printed on cardstock)</li>
+    <li>Speak Easy Dollars (printed, laminated, $1 / $5 / $10 denominations)</li>
+    <li>Weekly take-home sheets (one per kid)</li>
+    <li>Take-home passport stamp + ink pad</li>
+    <li>Timer or bell for transitions</li>
+  </ul>
+
+  <h3>Per-session specials</h3>
+  <ul>
+    <li>Week 4 piñata + candy + review slips</li>
+    <li>Week 6 certificates + camera + Session-B info sheets</li>
+    <li>Session-specific props: umbrella (Session A Week 3), 5 animal puppets (Session A Week 4), felt clothing set (Session A Week 5), etc.</li>
+  </ul>
+
+  <h3>Optional but recommended</h3>
+  <ul>
+    <li>Bluetooth speaker for songs and Macarena</li>
+    <li>Instant camera for finale photos</li>
+    <li>Simple snack for tasting circles (Week 3 in some sessions)</li>
+  </ul>
+</section>
+
+</main>
+
+<!-- ══════════ BACK NAV ══════════ -->
+<nav class="backnav">
+  <a href="index.html">← Back to Speak Easy 4 Kids</a>
+  <a href="pitch.pdf" target="_blank">Pitch Deck</a>
+  <a href="https://calendly.com/l8blo0om" target="_blank" rel="noopener">Book a Call</a>
+</nav>
+
+</body>
+</html>
