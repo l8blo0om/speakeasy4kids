@@ -268,7 +268,49 @@
     .visit-counter #vc { color: rgba(255,255,255,0.65); font-weight: 700; }
     .visit-counter #vc.empty { opacity: 0.5; }
 
-  </style>
+  
+    /* ── HUE-CYCLING UTILITIES (vibrant — playful kid palette) ── */
+    .btn-glow {
+      background: #0a0a0a; color: #fff; border: none;
+      padding: 1.05rem 2.2rem; cursor: pointer;
+      font-family: 'Oswald', sans-serif; font-weight: 700;
+      font-size: 1rem; letter-spacing: 2.5px; text-transform: uppercase;
+      text-decoration: none; display: inline-block;
+      box-shadow: 0 0 0 1.5px hsl(var(--hue) 90% 55%), 0 0 22px hsl(var(--hue) 90% 55% / .3);
+      animation: breathe 3s ease-in-out infinite;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-glow:hover { background: hsl(var(--hue) 90% 55%); color: #0a0a0a; }
+    @keyframes breathe {
+      0%,100% { box-shadow: 0 0 0 1.5px hsl(var(--hue) 90% 55%), 0 0 18px hsl(var(--hue) 90% 55% / .25); }
+      50%     { box-shadow: 0 0 0 1.5px hsl(var(--hue) 90% 55%), 0 0 32px hsl(var(--hue) 90% 55% / .5); }
+    }
+    .glow-line {
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(90deg, hsl(var(--hue) 90% 55%), hsl(calc(var(--hue) + 60) 90% 55%), hsl(var(--hue) 90% 55%)) 1;
+    }
+    .accent { color: hsl(var(--hue) 90% 57%); }
+
+  
+/* glowing outlined button that breathes */
+.btn-glow{
+  background:#0a0a0a;color:#fff;border:none;padding:15px 28px;cursor:pointer;
+  box-shadow:0 0 0 1.5px hsl(var(--hue) 90% 60%), 0 0 22px hsl(var(--hue) 90% 58% / .3);
+  animation:breathe 3s ease-in-out infinite;
+}
+.btn-glow:hover{background:hsl(var(--hue) 90% 58%);color:#0a0a0a}
+@keyframes breathe{
+  0%,100%{box-shadow:0 0 0 1.5px hsl(var(--hue) 90% 60%), 0 0 18px hsl(var(--hue) 90% 58% / .25)}
+  50%   {box-shadow:0 0 0 1.5px hsl(var(--hue) 90% 60%), 0 0 32px hsl(var(--hue) 90% 58% / .5)}
+}
+
+/* glowing hairline (like the header border) */
+.glow-line{border-bottom:2px solid transparent;
+  border-image:linear-gradient(90deg,hsl(var(--hue) 90% 60%),hsl(calc(var(--hue) + 60) 90% 60%),hsl(var(--hue) 90% 60%)) 1}
+
+/* accent text (eyebrows, highlights) */
+.accent{color:hsl(var(--hue) 90% 62%)}
+</style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -429,7 +471,7 @@
   <div class="hero-content">
     <div class="hero-eyebrow" data-i18n="hero_eyebrow">Afterschool · 8 Weeks · K–5</div>
     <h1 class="hero-title"><span data-i18n="hero_title_1">Spanish</span><br/><span class="yellow" data-i18n="hero_title_2">that feels like</span><br/><span data-i18n="hero_title_3">recess.</span></h1>
-    <div class="hero-divider"></div>
+    <div class="hero-divider glow-line"></div>
     <div class="hero-sub" data-i18n="hero_sub">Play-based · Culture-rich · Built by a PhD educator</div>
     <p class="hero-desc" data-i18n="hero_desc">An 8-week arc for K–5 kids. Games, songs, cultural traditions, storytelling — no worksheets, ever. By week 2, kids introduce themselves in Spanish. By week 8, they perform what they learned for their families. Built by a PhD educator with 30 years in the classroom.</p>
     <div class="hero-btns">
@@ -477,7 +519,7 @@
   </div>
   <div class="section-inner">
     <div class="teacher-card">
-      <p class="tc-eyebrow" data-i18n="tc_eyebrow">Meet your teacher</p>
+      <p class="tc-eyebrow accent" data-i18n="tc_eyebrow">Meet your teacher</p>
       <h3 class="tc-h" data-i18n="tc_h">Three decades teaching language.<br/>Now applied to your kid.</h3>
       <p class="tc-line" data-i18n="tc_l1"><strong>PhD</strong>Comparative Literature — University of Michigan</p>
       <p class="tc-line" data-i18n="tc_l2"><strong>MA</strong>Comparative Literature, with Graduate Certificate in Women's Studies</p>
