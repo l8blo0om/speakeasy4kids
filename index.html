@@ -158,7 +158,8 @@
 
     /* ── PRICING ── */
     .pricing { background: var(--cream); }
-    .price-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2.25rem; }
+    .price-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2.25rem; }
+    @media (max-width: 1000px) { .price-row { grid-template-columns: repeat(2, 1fr); } }
     .price-card { background: var(--dark); color: #fff; padding: 2rem 1.5rem; text-align: center; }
     .price-card .label { font-family: 'Oswald',sans-serif; font-size: 0.72rem; letter-spacing: 3px; color: var(--yellow); margin-bottom: 0.75rem; text-transform: uppercase; }
     .price-card .amount { font-family: 'Oswald',sans-serif; font-size: 2.6rem; font-weight: 700; color: var(--yellow); line-height: 1; margin-bottom: 0.4rem; }
@@ -450,14 +451,20 @@
       "offers": [
         {
           "@type": "Offer",
-          "name": "Parents — 1 child, 6-week session",
-          "price": "199",
+          "name": "Parents — first try, 6-week session",
+          "price": "99",
           "priceCurrency": "USD"
         },
         {
           "@type": "Offer",
-          "name": "Parents — sibling, 6-week session",
-          "price": "149",
+          "name": "Parents — 1 child, 6-week session",
+          "price": "129",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Parents — 2 children, per child, 6-week session",
+          "price": "119",
           "priceCurrency": "USD"
         },
         {
@@ -706,16 +713,22 @@
         <div class="detail" data-i18n="price_pilot_detail">Custom pricing per school size and session count. We supply instructor, materials, and finale supplies.</div>
       </div>
       <div class="price-card">
-        <div class="label" data-i18n="price_one_label">Parents · One Child</div>
-        <div class="amount" data-i18n="price_one_amount">$199</div>
-        <div class="per" data-i18n="price_one_per">Full 6-week session</div>
-        <div class="detail" data-i18n="price_one_detail">All 8 classes, all materials, all snacks, finale showcase. One flat rate.</div>
+        <div class="label" data-i18n="price_try_label">Parents · First Try</div>
+        <div class="amount" data-i18n="price_try_amount">$99</div>
+        <div class="per" data-i18n="price_try_per">Your first session with us</div>
+        <div class="detail" data-i18n="price_try_detail">New families. The full six weeks — materials, snacks and the finale showcase included.</div>
       </div>
       <div class="price-card">
-        <div class="label" data-i18n="price_sib_label">Parents · Sibling</div>
-        <div class="amount" data-i18n="price_sib_amount">$149</div>
-        <div class="per" data-i18n="price_sib_per">Second child, same family</div>
-        <div class="detail" data-i18n="price_sib_detail">Bring a sister or brother and save $50. Different grade is fine — class is K–5 mixed.</div>
+        <div class="label" data-i18n="price_one_label">Parents · One Child</div>
+        <div class="amount" data-i18n="price_one_amount">$129</div>
+        <div class="per" data-i18n="price_one_per">Full 6-week session</div>
+        <div class="detail" data-i18n="price_one_detail">All six classes, all materials, all snacks, finale showcase. One flat rate.</div>
+      </div>
+      <div class="price-card">
+        <div class="label" data-i18n="price_sib_label">Parents · Two Children</div>
+        <div class="amount" data-i18n="price_sib_amount">$119<span style="font-size:0.42em;letter-spacing:2px;"> EACH</span></div>
+        <div class="per" data-i18n="price_sib_per">Per child, same family</div>
+        <div class="detail" data-i18n="price_sib_detail">Different grades are fine — the class is K–5 mixed on purpose. Younger kids learn up, older kids teach back.</div>
       </div>
     </div>
     <div class="scholarship-callout">
@@ -844,10 +857,12 @@
       price_tag: "Pricing", price_h2: "Straightforward.<br/>No hidden materials fees.",
       price_pilot_label: "Schools · Pilot Rate", price_pilot_amount: "Contact", price_pilot_per: "First school in district",
       price_pilot_detail: "Custom pricing per school size and session count. We supply instructor, materials, and finale supplies.",
-      price_one_label: "Parents · One Child", price_one_amount: "$199", price_one_per: "Full 6-week session",
-      price_one_detail: "All 8 classes, all materials, all snacks, finale showcase. One flat rate.",
-      price_sib_label: "Parents · Sibling", price_sib_amount: "$149", price_sib_per: "Second child, same family",
-      price_sib_detail: "Bring a sister or brother and save $50. Different grade is fine — class is K–5 mixed.",
+      price_try_label: "Parents · First Try", price_try_amount: "$99", price_try_per: "Your first session with us",
+      price_try_detail: "New families. The full six weeks — materials, snacks and the finale showcase included.",
+      price_one_label: "Parents · One Child", price_one_amount: "$129", price_one_per: "Full 6-week session",
+      price_one_detail: "All six classes, all materials, all snacks, finale showcase. One flat rate.",
+      price_sib_label: "Parents · Two Children", price_sib_amount: "$119<span style=\"font-size:0.42em;letter-spacing:2px;\"> EACH</span>", price_sib_per: "Per child, same family",
+      price_sib_detail: "Different grades are fine — the class is K–5 mixed on purpose. Younger kids learn up, older kids teach back.",
       price_note: "No child has ever been turned away for inability to pay.",
       price_note_sub: "Need-based scholarships available.",
       faq_tag: "FAQ", faq_h2: "The questions parents and principals actually ask.",
@@ -920,10 +935,12 @@
       price_tag: "Precios", price_h2: "Directo.<br/>Sin tarifas ocultas de materiales.",
       price_pilot_label: "Escuelas · Tarifa Piloto", price_pilot_amount: "Consultar", price_pilot_per: "Primera escuela en el distrito",
       price_pilot_detail: "Precios personalizados según tamaño de escuela y cantidad de sesiones. Proveemos instructora, materiales y suministros del final.",
-      price_one_label: "Padres · Un Hijo", price_one_amount: "$199", price_one_per: "Sesión completa de 6 semanas",
-      price_one_detail: "Las 8 clases, todos los materiales, todos los bocadillos, showcase final. Una tarifa plana.",
-      price_sib_label: "Padres · Hermano", price_sib_amount: "$149", price_sib_per: "Segundo hijo, misma familia",
-      price_sib_detail: "Trae a un hermano o hermana y ahorra $50. Diferente grado está bien — la clase es K–5 mixta.",
+      price_try_label: "Padres · Primera Vez", price_try_amount: "$99", price_try_per: "Tu primera sesión con nosotros",
+      price_try_detail: "Familias nuevas. Las seis semanas completas — materiales, meriendas y el showcase final incluidos.",
+      price_one_label: "Padres · Un Hijo", price_one_amount: "$129", price_one_per: "Sesión completa de 6 semanas",
+      price_one_detail: "Las seis clases, todos los materiales, todos los bocadillos, showcase final. Una tarifa plana.",
+      price_sib_label: "Padres · Dos Hijos", price_sib_amount: "$119<span style=\"font-size:0.42em;letter-spacing:2px;\"> C/U</span>", price_sib_per: "Por niño, misma familia",
+      price_sib_detail: "Diferentes grados está bien — la clase es K–5 mixta a propósito. Los menores aprenden de los mayores.",
       price_note: "Ningún niño ha sido rechazado por incapacidad de pagar.",
       price_note_sub: "Hay becas según necesidad.",
       faq_tag: "FAQ", faq_h2: "Las preguntas que padres y directores realmente hacen.",
@@ -971,7 +988,7 @@
       <div class="meta-rows">
         <div class="meta-row"><span class="k">GRADES</span><span class="v">K – 5 mixed</span></div>
         <div class="meta-row"><span class="k">LENGTH</span><span class="v">6-week session</span></div>
-        <div class="meta-row"><span class="k">START</span><span class="v">$129 · at school</span></div>
+        <div class="meta-row"><span class="k">FIRST TRY</span><span class="v">$99 · then $129</span></div>
       </div>
       <button class="enter-btn" onclick="seEnter()">▸ PASS GO</button>
     </div>
