@@ -16,7 +16,7 @@
   <meta name="google-site-verification" content=""/>
   <meta name="msvalidate.01" content=""/>
   <meta name="description" content="6 weeks of play-based Spanish for K–5 kids. Games, songs, crafts, culture. Available as an afterschool pilot at your school."/>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Special+Elite&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     @property --hue { syntax: '<number>'; inherits: true; initial-value: 0; }
     :root.hue-anim { --hue: 0; }
@@ -68,11 +68,11 @@
     .hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80'); background-size: cover; background-position: center 40%; filter: brightness(0.4) saturate(0.85); }
     .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 10px; background: repeating-linear-gradient(90deg, var(--red) 0 40px, var(--orange) 40px 80px, var(--yellow) 80px 120px); z-index: 3; }
     .hero-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; text-align: center; padding: 3rem 2rem; color: #fff; }
-    .hero-eyebrow { font-family: 'Special Elite', cursive; font-size: clamp(0.7rem, 1.4vw, 0.9rem); color: var(--yellow); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .hero-eyebrow { font-family: 'Oswald', sans-serif; font-size: clamp(0.7rem, 1.4vw, 0.9rem); color: var(--yellow); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1.25rem; }
     .hero-title { font-family: 'Oswald', sans-serif; font-size: clamp(2.6rem, 7vw, 4.8rem); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; line-height: 1.02; margin-bottom: 0.8rem; }
     .hero-title .yellow { color: hsl(var(--hue), 90%, 55%); }
     .hero-divider { width: 80px; height: 3px; background: var(--yellow); margin: 1.5rem auto; }
-    .hero-sub { font-family: 'Special Elite', cursive; font-size: clamp(0.85rem, 2vw, 1.05rem); color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 1.25rem; text-transform: uppercase; }
+    .hero-sub { font-family: 'Oswald', sans-serif; font-size: clamp(0.85rem, 2vw, 1.05rem); color: rgba(255,255,255,0.85); letter-spacing: 2px; margin-bottom: 1.25rem; text-transform: uppercase; }
     .hero-desc { font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 2.5rem; max-width: 540px; margin-left: auto; margin-right: auto; }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .btn { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 2.5px; text-transform: uppercase; padding: 1.15rem 2.3rem; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s, box-shadow 0.15s; border: 3px solid transparent; min-height: 3.4rem; line-height: 1; }
@@ -292,7 +292,7 @@
       text-transform: uppercase; line-height: 1.15;
     }
     .welcome-card .sub {
-      font-family: 'Special Elite', cursive;
+      font-family: 'Oswald', sans-serif;
       font-size: 0.7rem; letter-spacing: 2.5px;
       text-transform: uppercase;
       margin-top: 0.4rem;
@@ -302,13 +302,13 @@
       padding: 1.5rem 1.75rem 1.35rem;
     }
     .welcome-card .welcome-line {
-      font-family: 'Special Elite', cursive;
+      font-family: 'Oswald', sans-serif;
       font-size: 0.72rem; letter-spacing: 3px;
       color: #666; text-transform: uppercase;
       margin-bottom: 0.9rem;
     }
     .welcome-card .tagline {
-      font-family: 'Special Elite', cursive;
+      font-family: 'Oswald', sans-serif;
       font-size: 1rem; color: #1A1A1A;
       font-style: italic; line-height: 1.35;
       margin-bottom: 1.5rem;
@@ -330,7 +330,7 @@
       color: #1A1A1A;
     }
     .welcome-card .meta-row .v {
-      font-family: 'Special Elite', cursive;
+      font-family: 'Oswald', sans-serif;
       color: #333; letter-spacing: 1px; text-transform: uppercase;
     }
     .welcome-card .enter-btn {
@@ -352,6 +352,25 @@
     .welcome-card::before { top: 6px; left: 6px; border-right: none; border-bottom: none; }
     .welcome-card::after { bottom: 6px; right: 6px; border-left: none; border-top: none; }
 
+  
+    /* ── GOOGLE TRANSLATE (long-tail languages) ── */
+    #se-gt { display: inline-flex; align-items: center; }
+    #se-gt .goog-te-gadget { font-size: 0 !important; line-height: 1; color: transparent !important; }
+    #se-gt .goog-te-gadget > span, #se-gt .goog-logo-link,
+    #se-gt .goog-te-gadget-simple { display: none !important; }
+    #se-gt .goog-te-combo {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.75);
+      font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.5px; padding: 0.22rem 0.4rem; border-radius: 3px;
+      cursor: pointer; line-height: 1; max-width: 9.5rem;
+    }
+    #se-gt .goog-te-combo option { color: #1a1a1a; background: #fff; }
+    #se-gt .goog-te-combo:hover { border-color: var(--yellow); color: var(--yellow); }
+    /* suppress the injected top banner and the body offset it forces */
+    .goog-te-banner-frame, .skiptranslate > iframe { display: none !important; }
+    body { top: 0 !important; }
   </style>
   <script type="application/ld+json">
 {
@@ -412,7 +431,7 @@
       "@type": "EducationalOrganization",
       "@id": "https://speakeasy4kids.com/#organization",
       "name": "Speak Easy 4 Kids",
-      "description": "An 6-week play-based Spanish afterschool program for K–5. Games, songs, cultural traditions, storytelling — no worksheets. Built by a PhD educator.",
+      "description": "A 6-week play-based Spanish afterschool program for K–5. Games, songs, cultural traditions, storytelling — no worksheets. Built by a PhD educator.",
       "url": "https://speakeasy4kids.com",
       "image": "https://speakeasy4kids.com/og-kids.jpg",
       "founder": {
@@ -480,7 +499,7 @@
       "@id": "https://speakeasy4kids.com/#website",
       "url": "https://speakeasy4kids.com",
       "name": "Speak Easy 4 Kids",
-      "description": "An 6-week play-based Spanish afterschool program for K–5. Games, songs, cultural traditions, storytelling — no worksheets. Built by a PhD educator.",
+      "description": "A 6-week play-based Spanish afterschool program for K–5. Games, songs, cultural traditions, storytelling — no worksheets. Built by a PhD educator.",
       "publisher": {
         "@id": "https://languagespeakeasy.com/#nicolebishop"
       }
@@ -502,6 +521,7 @@
       <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">🇺🇸 EN</button>
       <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">🇪🇸 ES</button>
     </div>
+      <div id="se-gt" title="Translate this page"></div>
     <ul class="nav-links">
       <li><a href="#about" data-i18n="nav_about">About</a></li>
       <li><a href="#how" data-i18n="nav_how">How It Works</a></li>
@@ -519,11 +539,11 @@
   <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-eyebrow" data-i18n="hero_eyebrow">Afterschool · 6 Weeks · K–5</div>
-    <div style="display:inline-block;background:#FEF200;color:#1A1A1A;border:2px solid #1A1A1A;box-shadow:3px 3px 0 #1A1A1A;font-weight:800;font-size:0.72rem;letter-spacing:2.5px;text-transform:uppercase;padding:0.45rem 1rem;margin:0.9rem 0 0.6rem;">★ First Session · October 2026 ★</div>
+    <div style="display:inline-block;background:#FEF200;color:#1A1A1A;border:2px solid #1A1A1A;box-shadow:3px 3px 0 #1A1A1A;font-weight:800;font-size:0.72rem;letter-spacing:2.5px;text-transform:uppercase;padding:0.45rem 1rem;margin:0.9rem 0 0.6rem;">★ Enrolling Now · Next Session Starts Soon ★</div>
     <h1 class="hero-title"><span data-i18n="hero_title_1">Spanish</span><br/><span class="yellow" data-i18n="hero_title_2">that feels like</span><br/><span data-i18n="hero_title_3">recess.</span></h1>
     <div class="hero-divider glow-line"></div>
     <div class="hero-sub" data-i18n="hero_sub">Play-based · Culture-rich · Built by a PhD educator</div>
-    <p class="hero-desc" data-i18n="hero_desc">An 6-week arc for K–5 kids. Games, songs, cultural traditions, storytelling — no worksheets, ever. By week 2, kids introduce themselves in Spanish. By week 6, they perform what they learned for their families. Built by a PhD educator with 30 years in the classroom.</p>
+    <p class="hero-desc" data-i18n="hero_desc">A 6-week arc for K–5 kids. Games, songs, cultural traditions, storytelling — no worksheets, ever. By week 2, kids introduce themselves in Spanish. By week 6, they perform what they learned for their families. Built by a PhD educator with 30 years in the classroom.</p>
     <div class="hero-btns">
       <a href="#schools" class="btn btn-red" data-i18n="hero_btn_schools">For Schools — Pilot Us</a>
       <a href="#parents" class="btn btn-outline" data-i18n="hero_btn_parents">For Parents — Enroll</a>
@@ -558,7 +578,7 @@
       <div class="section-tag" data-i18n="about_tag">Who Built This</div>
       <h2 data-i18n="about_h2">Designed by a teacher.<br/>Not a tech bro.</h2>
       <p data-i18n="about_p1">Speak Easy Kids was built by Dr. Nicole Bishop — a PhD educator who has been teaching since 1996 and has spent her career figuring out how to make language stick. The program is modeled on the kind of afterschool culture clubs that already work — but redesigned around play, music, food, and games kids actually want to come back to.</p>
-      <p data-i18n="about_p2">No screens. No worksheets. No "repeat after me." Just an 6-week arc that runs like a story: kids meet, learn the words, use the words, and perform what they've learned for their families at the end.</p>
+      <p data-i18n="about_p2">No screens. No worksheets. No "repeat after me." Just a 6-week arc that runs like a story: kids meet, learn the words, use the words, and perform what they've learned for their families at the end.</p>
       <div class="pill-row">
         <span class="pill red" data-i18n="pill_8wk">6-Week Session</span>
         <span class="pill green" data-i18n="pill_k5">K–5 Mixed</span>
@@ -650,7 +670,7 @@
     </div>
   </div>
     <div style="text-align:center; margin-top: 2.5rem;">
-      <a href="curriculum.html" style="display:inline-block; font-family:'Oswald',sans-serif; font-size:0.85rem; letter-spacing:2.5px; text-transform:uppercase; color:var(--dark); text-decoration:none; padding:0.85rem 1.75rem; border:2px solid var(--dark); background:var(--yellow); transition:all 0.2s;" onmouseover="this.style.background='var(--red)';this.style.color='#fff';this.style.borderColor='var(--red)';" onmouseout="this.style.background='var(--yellow)';this.style.color='var(--dark)';this.style.borderColor='var(--dark)';" data-i18n="curr_full_link">📖 See the Full Instructor Curriculum →</a>
+      <a href="/curriculum" style="display:inline-block; font-family:'Oswald',sans-serif; font-size:0.85rem; letter-spacing:2.5px; text-transform:uppercase; color:var(--dark); text-decoration:none; padding:0.85rem 1.75rem; border:2px solid var(--dark); background:var(--yellow); transition:all 0.2s;" onmouseover="this.style.background='var(--red)';this.style.color='#fff';this.style.borderColor='var(--red)';" onmouseout="this.style.background='var(--yellow)';this.style.color='var(--dark)';this.style.borderColor='var(--dark)';" data-i18n="curr_full_link">📖 See the Full Instructor Curriculum →</a>
     </div>
   </section>
 
@@ -776,7 +796,7 @@
 <!-- FINAL CTA -->
 <section class="final-cta" id="enroll">
   <h2 data-i18n="cta_h2">Ready to Start?</h2>
-  <p data-i18n="cta_p">Whether you're a parent looking for an afterschool that actually sticks, or a principal looking for an 6-week pilot that runs itself — let's talk.</p>
+  <p data-i18n="cta_p">Whether you're a parent looking for an afterschool that actually sticks, or a principal looking for a 6-week pilot that runs itself — let's talk.</p>
   <div class="hero-btns">
     <!-- TODO: replace l8blo0om with your real Calendly URL -->
     <a href="https://calendly.com/l8blo0om" target="_blank" rel="noopener" class="btn-glow" data-i18n="cta_btn_book">Book a Call</a>
@@ -787,7 +807,7 @@
 <!-- FOOTER -->
 <footer>
   <div style="font-family:'Oswald',sans-serif;color:#fff;letter-spacing:2px;font-size:1rem;text-transform:uppercase;margin-bottom:0.4rem;">Speak Easy <span style="color:var(--yellow)">Kids</span></div>
-  <div data-i18n="footer_tag">An 6-week play-based Spanish afterschool program for K–5.</div>
+  <div data-i18n="footer_tag">A 6-week play-based Spanish afterschool program for K–5.</div>
   <div class="footer-row">
     <a href="mailto:speak.easy.columbia@gmail.com">speak.easy.columbia@gmail.com</a>
     <a href="tel:8038816626">803.881.6626</a>
@@ -804,7 +824,7 @@
       hero_eyebrow: "Afterschool · 6 Weeks · K–5",
       hero_title_1: "Spanish", hero_title_2: "that feels like", hero_title_3: "recess.",
       hero_sub: "Play-based · Culture-rich · Built by a PhD educator",
-      hero_desc: "An 6-week arc for K–5 kids. Games, songs, cultural traditions, storytelling — no worksheets, ever. By week 2, kids introduce themselves in Spanish. By week 6, they perform what they learned for their families. Built by a PhD educator with 30 years in the classroom.",
+      hero_desc: "A 6-week arc for K–5 kids. Games, songs, cultural traditions, storytelling — no worksheets, ever. By week 2, kids introduce themselves in Spanish. By week 6, they perform what they learned for their families. Built by a PhD educator with 30 years in the classroom.",
       hero_btn_schools: "For Schools — Pilot Us",
       hero_btn_parents: "For Parents — Enroll",
       qs_parent_eye: "Enroll your child", qs_parent: "I\u0027m a Parent",
@@ -813,7 +833,7 @@
       about_tag: "Who Built This",
       about_h2: "Designed by a teacher.<br/>Not a tech bro.",
       about_p1: "Speak Easy Kids was built by Dr. Nicole Bishop — a PhD educator who has been teaching since 1996 and has spent her career figuring out how to make language stick. The program is modeled on the kind of afterschool culture clubs that already work — but redesigned around play, music, food, and games kids actually want to come back to.",
-      about_p2: "No screens. No worksheets. No \"repeat after me.\" Just an 6-week arc that runs like a story: kids meet, learn the words, use the words, and perform what they've learned for their families at the end.",
+      about_p2: "No screens. No worksheets. No \"repeat after me.\" Just a 6-week arc that runs like a story: kids meet, learn the words, use the words, and perform what they've learned for their families at the end.",
       pill_8wk: "6-Week Session", pill_k5: "K–5 Mixed", pill_60min: "60 Min/Week", pill_finale: "Finale Showcase",
       tc_eyebrow: "Meet your teacher",
       tc_h: "Three decades teaching language.<br/>Now applied to your kid.",
@@ -871,11 +891,11 @@
       faq3_q: "What does a school need to provide?", faq3_a: "A classroom or gym, one afternoon a week, and a sign-up form. We bring the instructor, materials, games, snacks, and the finale supplies.",
       faq4_q: "How many kids per session?", faq4_a: "Sweet spot is 12–20. We can run two simultaneous groups if a school has more interest.",
       faq5_q: "Can homeschool families enroll?", faq5_a: "Yes. We run a parallel community session for homeschool families when there's enough demand. Email us with your zip code.",
-      faq6_q: "What if my kid misses a week?", faq6_a: "Each lesson stands alone, but the showcase builds on what came before. We send a one-page recap so missed kids don't fall behind.",
+      faq6_q: "What if my kid misses a week?", faq6_a: "Each lesson stands alone. We send a one-page recap so missed kids don't fall behind.",
       cta_h2: "Ready to Start?",
-      cta_p: "Whether you're a parent looking for an afterschool that actually sticks, or a principal looking for an 6-week pilot that runs itself — let's talk.",
+      cta_p: "Whether you're a parent looking for an afterschool that actually sticks, or a principal looking for a 6-week pilot that runs itself — let's talk.",
       cta_btn_book: "Book a Call", cta_btn_email: "Email Us", cta_btn_call: "Call 803.881.6626",
-      footer_tag: "An 6-week play-based Spanish afterschool program for K–5."
+      footer_tag: "A 6-week play-based Spanish afterschool program for K–5."
     },
     es: {
       nav_about: "Nosotros", nav_how: "Cómo Funciona", nav_curriculum: "Currículo", nav_schools: "Escuelas", nav_parents: "Padres", nav_pitch: "Propuesta", nav_enroll: "Inscríbete",
@@ -949,7 +969,7 @@
       faq3_q: "¿Qué necesita proveer la escuela?", faq3_a: "Un aula o gimnasio, una tarde a la semana, y un formulario de inscripción. Nosotros traemos la instructora, los materiales, los juegos, los bocadillos y los suministros del final.",
       faq4_q: "¿Cuántos niños por sesión?", faq4_a: "El punto dulce es 12–20. Podemos correr dos grupos simultáneos si una escuela tiene más interés.",
       faq5_q: "¿Pueden inscribirse familias de homeschool?", faq5_a: "Sí. Ofrecemos una sesión comunitaria paralela para familias homeschool cuando hay suficiente demanda. Escríbenos con tu código postal.",
-      faq6_q: "¿Qué pasa si mi hijo pierde una semana?", faq6_a: "Cada lección es independiente, pero el showcase se construye sobre lo anterior. Enviamos un resumen de una página para que los niños que faltaron no se atrasen.",
+      faq6_q: "¿Qué pasa si mi hijo pierde una semana?", faq6_a: "Cada lección es independiente. Enviamos un resumen de una página para que los niños que faltaron no se atrasen.",
       cta_h2: "¿Listos para Empezar?",
       cta_p: "Ya seas un padre buscando un programa extraescolar que realmente funcione, o un director buscando un piloto de 6 semanas que se ejecute solo — hablemos.",
       cta_btn_book: "Agenda una Llamada", cta_btn_email: "Escríbenos", cta_btn_call: "Llama 803.881.6626",
@@ -1006,5 +1026,16 @@
 })();
 </script>
 
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+        autoDisplay: false },
+      'se-gt');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 </body>
 </html>

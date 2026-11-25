@@ -1,2 +1,5 @@
-/pitch.html   /pitch        301!
-/pitch        /pitch-page.html   200
+# Clean URLs — .html stripped
+/pitch.html        /pitch             301!
+/pitch             /pitch-page.html   200
+/curriculum.html   /curriculum        301!
+/curriculum        /curriculum.html   200
